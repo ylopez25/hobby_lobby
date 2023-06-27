@@ -1,0 +1,22 @@
+.profile_info {
+    display:box;
+    align-items: center;
+    background-color: #ffcb9a;
+    width: auto;
+    height: 380px;
+    padding: 10px;
+    margin: 30px 60px;
+    border:2px solid #116466;
+    box-shadow: 10px 10px 5px lightblue;
+}
+.profile_username {
+    display: flex;
+    justify-content: space-evenly;
+}
+.profile_imgupload {
+    display: flex;
+    justify-content: space-evenly;
+}
+button {
+    background-color: #d9b08c;
+}
