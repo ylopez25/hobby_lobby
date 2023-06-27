@@ -1,0 +1,23 @@
+.users {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    border: 3px solid #d9b08c;;
+    width:auto;
+    height: auto;
+    /* padding: 10px; */
+    margin: 30px 60px;
+    background-color: #116466;
+}
+.users p {
+    /* display:flex;
+    align-items: center;
+    width:40%;
+    height: auto;
+    height: 80px; */
+    padding:20px;
+    height:150px;
+    margin:20px 20px;
+    background-color:  #ffcb9a;
+    border: 5px solid  #2c3531;
+}
