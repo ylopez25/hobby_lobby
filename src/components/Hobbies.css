@@ -1,0 +1,20 @@
+.hobbies {
+display:box;
+align-items: center;
+width: 600px;
+height: 380px;
+padding: 10px;
+margin: 30px 60px;
+/* border:2px solid #116466; */
+}
+
+.hobbies p { 
+    display: flex;
+    justify-content: center;
+    border: 2px solid green;
+    padding: 10px;
+    width:20%;
+    height:auto;
+    border-radius: 20px;
+    box-shadow: 10px 10px 5px #116466;
+}

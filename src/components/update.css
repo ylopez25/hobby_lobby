@@ -7,7 +7,8 @@
     padding: 10px;
     margin: 30px 60px;
     border:2px solid #116466;
-    box-shadow: 10px 10px 5px lightblue;
+    border-radius:10px;
+    box-shadow: 10px 10px 5px #116466;
 }
 .profile_username {
     display: flex;
@@ -17,6 +18,4 @@
     display: flex;
     justify-content: space-evenly;
 }
-button {
-    background-color: #d9b08c;
-}
+

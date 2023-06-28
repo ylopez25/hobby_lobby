@@ -2,3 +2,13 @@ body {
   background-color: #d1e8e2;
   color:  #2c3531;
 }
+.home {
+  display:flex;
+  justify-content: space-around;
+}
+button {
+  background-color: #d9b08c;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin: 10px 10px;
+}
