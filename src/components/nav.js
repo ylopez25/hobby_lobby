@@ -2,7 +2,7 @@ import React from 'react'
 import './nav.css'
 export default function nav() {
   return (
-    <div class='nav'>
+    <div className='nav'>
         <div>
             <button>home</button>
         </div>

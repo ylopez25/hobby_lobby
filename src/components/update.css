@@ -1,21 +1,20 @@
 .profile_info {
-    display:box;
-    align-items: center;
-    background-color: #ffcb9a;
-    width: 600px;
-    height: 380px;
-    padding: 10px;
-    margin: 30px 60px;
-    border:2px solid #116466;
-    border-radius:10px;
-    box-shadow: 10px 10px 5px #116466;
+  display: box;
+  align-items: center;
+  background-color: #ffcb9a;
+  width: 600px;
+  height: 380px;
+  padding: 10px;
+  margin: 30px 60px;
+  border: 2px solid #116466;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px #2c3531;
 }
 .profile_username {
-    display: flex;
-    justify-content: space-evenly;
+  display: flex;
+  justify-content: space-evenly;
 }
 .profile_imgupload {
-    display: flex;
-    justify-content: space-evenly;
+  display: flex;
+  justify-content: space-evenly;
 }
-

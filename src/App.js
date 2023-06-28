@@ -9,7 +9,7 @@ function App() {
   return (
     <div>
       <Nav/>
-      <div class='home'>
+      <div className='home'>
       <Update/>
       <Hobbies/>
       </div>

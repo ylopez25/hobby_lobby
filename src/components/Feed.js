@@ -3,7 +3,7 @@ import './Feed.css';
 
 export default function Feed() {
   return (
-     <div class='users'>
+     <div className='users'>
         <p>Live Users</p>
         <p>image 1</p>
         <p>image 2</p>
