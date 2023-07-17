@@ -29,6 +29,7 @@ function App() {
         <Update />
         <Hobbies users={users} />
       </div>
+      <h1>LIVE:</h1>
       <Feed users={users} />
     </div>
   );

@@ -12,7 +12,7 @@ export default function Hobbies({ users }) {
           return <p>{hobby.skill}</p>;
         })}
       </div>
-      <div className="hobbyBtn">
+      <div className="btn">
         <button>filter</button>
         <button>clear</button>
       </div>
