@@ -21,7 +21,7 @@ function App() {
       const json = await res.json();
       console.log(json, "json");
       const { data,err} = json;
-      data.split(' ')
+      // data.split(' ')
       console.log(data, "data");
       if(res.ok) {
         setUsers(data);
