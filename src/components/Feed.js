@@ -4,8 +4,6 @@ import "./Feed.css";
 export default function Feed({ users }) {
   return (
     <div className="users">
-
-
       {users.map((user) => {
         return (
           <div className="userCard">

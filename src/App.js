@@ -5,6 +5,7 @@ import Update from "./components/Update";
 import Feed from "./components/Feed";
 import Hobbies from "./components/Hobbies";
 import Loading from "./components/Loading";
+import Error from "./components/Error";
 
 function App() {
   const [users, setUsers] = useState([]);
@@ -42,16 +43,18 @@ function App() {
     if (loading) {
       return <Loading />;
     } else if (err) {
-      return err;
+      return <Error err={err} />;
     } else {
       return (
-        <div>
+        <div className="app">
           <Nav />
           <div className="home">
             <Update />
             <Hobbies users={users} />
           </div>
-          <h1>LIVE:</h1>
+          <div className="live">
+            <h1>L I V E :</h1>
+          </div>
           <Feed users={users} />
         </div>
       );

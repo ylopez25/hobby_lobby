@@ -1,13 +1,14 @@
 .users {
     display: grid;
     grid-template-columns: auto auto auto;
-    align-items: center;
     border: 3px solid #D1E8E2;
     color: #ffcb9a;
-    width:auto;
-    height: auto;
-    margin: 30px 60px;
+    width:80vw;
+    height: 60vh;
+    margin:10px 100px 70px 100px;
+    padding:35px;
     background-color: #116466;
+    overflow: scroll;
 }
 .userCard {
     display: flex;
@@ -17,10 +18,12 @@
     margin:10px 20px;
     border:2px solid #ffcb9a;
     border-radius: 10px;
+    background-color:#D1E8E2 ;
 }
 .userinfo {
     margin:0px;
     padding: 0px;
+    color:black;
 }
 .grades {
     background-color: #3a2a1b;
