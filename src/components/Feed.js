@@ -13,8 +13,14 @@ export default function Feed({ users }) {
               <p>{user.city}</p>
               <p>follow</p>
             </div>
-            <div className="grades">
-              <p>{user.city}</p>
+            <div className="hobby_pics">
+              <div><h2>Profile pics</h2></div>
+              <p>{user.grades}</p>
+              <img src={user.pic} alt='img'/>
+              <img src={user.pic} alt='img'/>
+              <img src={user.pic} alt='img'/>
+              <img src={user.pic} alt='img'/>
+              <img src={user.pic} alt='img'/> <img src={user.pic} alt='img'/> <img src={user.pic} alt='img'/> <img src={user.pic} alt='img'/>
             </div>
           </div>
         );

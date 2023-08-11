@@ -4,13 +4,13 @@ export default function nav() {
   return (
     <div className='nav'>
         <div>
-            <button>home</button>
+            <button>H O M E</button>
         </div>
         <div>
-            <button>profile</button>
+            <button>P R O F I L E</button>
         </div>
         <div>
-            <button>Settings</button>
+            <button>S E T T I N G S</button>
         </div>
 
     </div>

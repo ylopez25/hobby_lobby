@@ -1,31 +1,37 @@
 .users {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 33% 33% 33%;
     border: 3px solid #D1E8E2;
-    color: #ffcb9a;
     width:80vw;
     height: 60vh;
     margin:10px 100px 70px 100px;
     padding:35px;
     background-color: #116466;
-    overflow: scroll;
+    overflow-y: auto;
+    color:black;
 }
 .userCard {
     display: flex;
-    justify-content: space-between;
-    padding:20px;
-    height:150px;
+    justify-content: space-around;
+    padding-top:5px;
+    height:300px;
+    width: auto;
     margin:10px 20px;
     border:2px solid #ffcb9a;
     border-radius: 10px;
     background-color:#D1E8E2 ;
 }
 .userinfo {
-    margin:0px;
-    padding: 0px;
-    color:black;
+    text-align: center;
+    height: fit-content;
+    width:50%;
 }
-.grades {
-    background-color: #3a2a1b;
-
+.userinfo img {
+    border-radius: 70%;
+    background-color: #ffcb9a;
+}
+.hobby_pics {
+    width:50%;
+    max-height: 95%;
+    overflow-y: auto;
 }

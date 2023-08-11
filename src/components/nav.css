@@ -4,4 +4,19 @@
     border: 1px solid;
     height: 50px;
     background-color: #116466;
+    width:auto;
+    margin:0px;
+}
+
+.nav button {
+    color: #d1e8e2;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    background: none;
+
 }
