@@ -52,9 +52,6 @@ function App() {
             <Update />
             <Hobbies users={users} />
           </div>
-          <div className="live">
-            <h1>L I V E :</h1>
-          </div>
           <Feed users={users} />
         </div>
       );

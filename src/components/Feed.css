@@ -1,47 +1,61 @@
+.search {
+  margin: 10px 150px;
+}
+input[type="text"] {
+  width: 40%;
+  height: 20px;
+  color: black;
+  background-color: #d1e8e2;
+}
+
+::placeholder {
+  color: black;
+  font-family: Lucida Sans;
+}
 .users {
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
-    border: 3px solid #D1E8E2;
-    width:80vw;
-    height: 60vh;
-    margin:10px 100px 70px 100px;
-    padding:35px;
-    background-color: #116466;
-    overflow-y: auto;
-    color:black;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  border: 3px solid #d1e8e2;
+  width: 80vw;
+  height: 100vh;
+  margin: 10px 100px 70px 100px;
+  padding: 35px;
+  background-color: #116466;
+  overflow-y: auto;
+  color: black;
 }
 .userCard {
-    display: flex;
-    justify-content: space-around;
-    padding-top:5px;
-    height:300px;
-    width: auto;
-    margin:10px 20px;
-    border:2px solid #ffcb9a;
-    border-radius: 10px;
-    background-color:#D1E8E2 ;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 5px;
+  height: 300px;
+  width: auto;
+  margin: 10px 20px;
+  border: 2px solid #ffcb9a;
+  border-radius: 10px;
+  background-color: #d1e8e2;
 }
 .userinfo {
-    text-align: center;
-    height: fit-content;
-    width:30%;
+  text-align: center;
+  height: fit-content;
+  width: 30%;
 }
 .userinfo img {
-    border-radius: 70%;
-    background-color: #ffcb9a;
+  border-radius: 70%;
+  background-color: #ffcb9a;
 }
 .hobby {
-    width:70%;
-    max-height: 95%;
+  width: 70%;
+  max-height: 95%;
 }
 .hobby_pics {
-    width:80%;
-    max-height: 75%;
-    overflow-y: auto;
+  width: 80%;
+  max-height: 75%;
+  overflow-y: auto;
 }
 .hobby_pics img {
-    width:100%;
+  width: 100%;
 }
-.hobby_pics h2{
-text-align: center;
+.hobby_pics h2 {
+  text-align: center;
 }
