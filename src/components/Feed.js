@@ -31,7 +31,16 @@ export default function Feed({ users }) {
     }
   };
 
-  const renderContent = () => {
+  //create a function that will expand all ids
+  const showAll = () => {
+    const allIds = users.map((user) => user.id);
+    setExpanded(allIds);
+  };
+  //create a function thast will close all
+  const closeAll = () => {
+    setExpanded([]);
+  };
+  const renderContent = () => { 
     if (displayUsers.length === 0) {
       return `No results for ${search}`;
     } else {
@@ -44,12 +53,12 @@ export default function Feed({ users }) {
               <h3>{user.username} </h3>
               <img src={user.pic} alt="img" />
               <p>{user.city}</p>
+              <button onClick={() => handleToggle(user.id)}> {expand.includes(user.id) ? "Show less" : "show more"}</button>
               <button onClick={() => setFollowing(!follow)}> {follow ? "follow" : "following"}</button>
             </div>
             <div className="hobby">
               <div>
-                <h2>Profile pics</h2>
-                <button onClick={() => handleToggle(user.id)}> {expand.includes(user.id) ? "Show less" : "show more"}</button>
+                <h2>Show Room</h2>
               </div>
 
               {expand.includes(user.id) && (
@@ -70,6 +79,8 @@ export default function Feed({ users }) {
     <div>
       <div className="search">
         <input value={search} type="text" placeholder="search by username or city" onChange={handleChange} />
+        <button onClick={showAll}>Show All</button>
+        <button onClick={closeAll}>Close All</button>
       </div>
       <div className="users">{renderContent()}</div>
     </div>
