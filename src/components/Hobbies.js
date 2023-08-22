@@ -2,13 +2,6 @@ import React from "react";
 import "./Hobbies.css";
 
 export default function Hobbies({ users }) {
-  //filter users based on onclick 
-
-  // const filteredUsers = (e) => {
-  //   console.log(e.target.value, 'e.t')
-  //  // let selectedUser = e.target.value;
-  // }
-
   return (
     <div className="hobbies">
       <center>

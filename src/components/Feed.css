@@ -1,9 +1,12 @@
-.search {
+ .search input {
   margin: 10px 150px;
+  border:none;
+  outline:none;
+  border-bottom: 3px solid #116466;;
 }
 input[type="text"] {
   width: 40%;
-  height: 20px;
+  height: 25px;
   color: black;
   background-color: #d1e8e2;
 }
