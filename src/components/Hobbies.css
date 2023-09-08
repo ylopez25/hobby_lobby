@@ -21,3 +21,10 @@
   justify-content: center;
   margin-top: 20px;
 }
+
+.result p {
+  display: block;
+  align-items: start;
+  justify-content: space-between;
+
+}

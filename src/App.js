@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import Nav from "./components/nav";
-import Update from "./components/Update";
+import Update from "./components/update";
 import Feed from "./components/Feed";
 import Hobbies from "./components/Hobbies";
 import Loading from "./components/Loading";
