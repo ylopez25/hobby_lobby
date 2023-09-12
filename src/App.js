@@ -9,8 +9,10 @@ import Error from "./components/Error";
 
 function App() {
   const [users, setUsers] = useState([]);
+  const [allUsers, setAllUsers] = useState([]);
   const [loading, setLoading] = useState(true);
   const [err, setErr] = useState("");
+  // const [activeHobby, setActiveHobby] = useState(null);
 
   const API_URL = "http://localhost:9000";
   useEffect(() => {
@@ -26,6 +28,7 @@ function App() {
         console.log(data, "data");
         if (res.ok) {
           setUsers(data);
+          setAllUsers(data);
           setLoading(false);
         } else {
           setErr(err);
@@ -39,6 +42,15 @@ function App() {
     fetchData();
   }, []);
 
+  const menuItems = [...new Set(allUsers.map((el) => el.skill))];
+
+//filter items
+const filterUsers = (cat) => {
+  const filteredUsers = allUsers.filter((val) => val.skill === cat);
+  setUsers(filteredUsers);
+  // setActiveHobby(cat);
+};
+
   const renderContent = () => {
     if (loading) {
       return <Loading />;
@@ -50,7 +62,7 @@ function App() {
           <Nav />
           <div className="home">
             <Update />
-            <Hobbies users={users} />
+            <Hobbies menuItems={menuItems} filterUsers={filterUsers} resetUsers={() => setUsers(allUsers)}/>
           </div>
           <Feed users={users} />
         </div>

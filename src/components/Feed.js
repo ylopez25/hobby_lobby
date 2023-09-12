@@ -5,7 +5,6 @@ import "./Feed.css";
 export default function Feed({ users }) {
   const [search, setSearch] = useState("");
   const [expand, setExpanded] = useState([]);
-  const [follow, setFollowing] = useState(false);
 
   const handleChange = (e) => {
     setSearch(e.target.value);
@@ -40,7 +39,7 @@ export default function Feed({ users }) {
   const closeAll = () => {
     setExpanded([]);
   };
-  const renderContent = () => { 
+  const renderContent = () => {
     if (displayUsers.length === 0) {
       return `No results for ${search}`;
     } else {
@@ -51,14 +50,16 @@ export default function Feed({ users }) {
           <div className="userCard">
             <div className="userinfo">
               <h3>{user.username} </h3>
+              <p>{user.skill}</p>
               <img src={user.pic} alt="img" />
               <p>{user.city}</p>
-              <button onClick={() => handleToggle(user.id)}> {expand.includes(user.id) ? "Show less" : "show more"}</button>
-              <button onClick={() => setFollowing(!follow)}> {follow ? "follow" : "following"}</button>
+              {/* <button onClick={() => handleToggle(user.id)}> {expand.includes(user.id) ? "Show less -" : "show more +"}</button> */}
+              {/* <button onClick={() => setFollowing(!follow)}> {follow ? "follow" : "following"}</button> */}
             </div>
             <div className="hobby">
               <div>
-                <h2>Show Room</h2>
+                {/* <h2>Show Room</h2> */}
+                <button onClick={() => handleToggle(user.id)}> {expand.includes(user.id) ? "Show less -" : "show more +"}</button>
               </div>
 
               {expand.includes(user.id) && (

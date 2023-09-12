@@ -1,14 +1,8 @@
 import React, { useState } from "react";
 import "./Hobbies.css";
 
-export default function Hobbies({ users }) {
-  const [item, setItem] = useState(users);
-  const menuItems = [...new Set(users.map((el) => el.skill))];
-
-  const filterItems = (cat) => {
-    const filter = users.filter((val) => val.skill === cat);
-    setItem(filter);
-  };
+export default function Hobbies({ menuItems, filterUsers, resetUsers }) {
+  const [activeHobby, setActiveHobby] = useState(null);
   return (
     <div className="hobbies">
       <center>
@@ -16,18 +10,30 @@ export default function Hobbies({ users }) {
       </center>
       <div className="hobby">
         {menuItems?.map((hobby) => {
-          return <p onClick={() => filterItems(hobby)}>{hobby}</p>;
+          return (
+            <p
+              style={activeHobby === hobby ? { backgroundColor: "#d1e8e2" } : { backgroundColor: "#116466" }}
+              onClick={() => {
+                setActiveHobby(hobby);
+                filterUsers(hobby);
+              }}
+            >
+              {hobby}
+            </p>
+          );
         })}
       </div>
       <div className="btn">
-        <button onClick={() => setItem(users)}>All</button>
+        <button
+          onClick={() => {
+            setActiveHobby(null);
+            resetUsers();
+          }}
+        >
+          All
+        </button>
       </div>
-      <div className="result">
-
-      {item?.map((el, id) => {
-        return <p key={id}>{el.username}</p>;
-      })}
-      </div>
+      <div className="result"></div>
     </div>
   );
 }
