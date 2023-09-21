@@ -23,7 +23,7 @@ export default function Hobbies({ menuItems, filterUsers, resetUsers }) {
           );
         })}
       </div>
-      <div className="btn">
+      <div >
         <button
           onClick={() => {
             setActiveHobby(null);

@@ -14,7 +14,7 @@ function App() {
   const [err, setErr] = useState("");
   // const [activeHobby, setActiveHobby] = useState(null);
 
-  const API_URL = "http://localhost:9000";
+  const API_URL = process.env.REACT_APP_API_URL;
   useEffect(() => {
     console.log("app rendered");
     async function fetchData() {

@@ -1,6 +1,7 @@
  .search input {
-  margin: 10px 150px;
+  margin: 10px 170px;
   border:none;
+  max-width: 30%;
   outline:none;
   border-bottom: 3px solid #116466;;
 }
