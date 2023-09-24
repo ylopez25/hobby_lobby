@@ -50,18 +50,14 @@ export default function Feed({ users }) {
           <div className="userCard">
             <div className="userinfo">
               <h3>{user.username} </h3>
-              <p>{user.skill}</p>
               <img src={user.pic} alt="img" />
-              <p>{user.city}</p>
-              {/* <button onClick={() => handleToggle(user.id)}> {expand.includes(user.id) ? "Show less -" : "show more +"}</button> */}
-              {/* <button onClick={() => setFollowing(!follow)}> {follow ? "follow" : "following"}</button> */}
+              <p>Hobby: {user.skill}</p>
+              <p>City: {user.city}</p>
             </div>
             <div className="hobby">
               <div>
-                {/* <h2>Show Room</h2> */}
-                <button onClick={() => handleToggle(user.id)}> {expand.includes(user.id) ? "Show less -" : "show more +"}</button>
+                <button onClick={() => handleToggle(user.id)}> {expand.includes(user.id) ? "Collapse " : "Gallery"}</button>
               </div>
-
               {expand.includes(user.id) && (
                 <div className="hobby_pics">
                   {photos?.map((img, id) => (

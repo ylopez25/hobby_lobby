@@ -43,6 +43,7 @@ input[type="text"] {
   text-align: center;
   height: fit-content;
   width: 30%;
+  margin-left: 50px;
 }
 .userinfo img {
   border-radius: 70%;
