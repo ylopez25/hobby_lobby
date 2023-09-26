@@ -1,28 +1,28 @@
-import React from 'react'
-import './nav.css' 
-import SvgIcon from '@mui/material/SvgIcon';
+import React from "react";
+import "./nav.css";
+import { createSvgIcon } from "@mui/material/utils";
+import ManageAccountsIcon from "@mui/icons-material/ManageAccounts";
+const HomeIcon = createSvgIcon(<path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />, "Home");
 
-function HomeIcon(props) {
-  return (
-    <SvgIcon {...props}>
-      <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
-    </SvgIcon>
-  );
-}
+const PlusIcon = createSvgIcon(
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+    <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+  </svg>,
+  "Plus"
+);
 
 export default function nav() {
   return (
-    <div className='nav'>
-        <div>
-            <HomeIcon color="beige" fontSize="large" />
-        </div>
-        <div>
-            <button>P O S T</button>
-        </div>
-        <div>
-            <button>S E T T I N G S</button>
-        </div>
-
+    <div className="nav">
+      <div>
+        <HomeIcon fontSize="large" />
+      </div>
+      <div>
+        <PlusIcon fontSize="large" />
+      </div>
+      <div>
+        <ManageAccountsIcon fontSize="large" />{" "}
+      </div>
     </div>
-  )
+  );
 }
