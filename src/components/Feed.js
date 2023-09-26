@@ -1,6 +1,9 @@
 import React from "react";
 import { useState } from "react";
 import "./Feed.css";
+import TextField from "@mui/material/TextField";
+import ToggleButton from "@mui/material/ToggleButton";
+import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 
 export default function Feed({ users }) {
   const [search, setSearch] = useState("");
@@ -53,16 +56,20 @@ export default function Feed({ users }) {
               <img src={user.pic} alt="img" />
               <p>Hobby: {user.skill}</p>
               <p>City: {user.city}</p>
-            </div>
-            <div className="hobby">
               <div>
                 <button onClick={() => handleToggle(user.id)}> {expand.includes(user.id) ? "Collapse " : "Gallery"}</button>
               </div>
-              {expand.includes(user.id) && (
+            </div>
+            <div className="hobby">
+              {expand.includes(user.id) ? (
                 <div className="hobby_pics">
                   {photos?.map((img, id) => (
                     <img key={id} src={img} alt="img" />
                   ))}
+                </div>
+              ) : (
+                <div className="hobby_pics">
+                  <img src={photos[0]} alt="img" />
                 </div>
               )}
             </div>
@@ -75,9 +82,11 @@ export default function Feed({ users }) {
   return (
     <div>
       <div className="search">
-        <input value={search} type="text" placeholder="search by username or city" onChange={handleChange} />
-        <button onClick={showAll}>Show All</button>
-        <button onClick={closeAll}>Close All</button>
+        <TextField id="outlined-controlled" value={search} onChange={handleChange} label="USERNAME OR CITY" size="small" halfWidth focused />
+        <ToggleButtonGroup>
+          <ToggleButton onClick={showAll}>Expand all imgs</ToggleButton>
+          <ToggleButton onClick={closeAll}>Close all imgs</ToggleButton>
+        </ToggleButtonGroup>
       </div>
       <div className="users">{renderContent()}</div>
     </div>

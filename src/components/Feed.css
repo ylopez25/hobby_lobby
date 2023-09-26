@@ -1,21 +1,8 @@
- .search input {
-  margin: 10px 170px;
-  border:none;
-  max-width: 30%;
-  outline:none;
-  border-bottom: 3px solid #116466;;
-}
-input[type="text"] {
-  width: 40%;
-  height: 25px;
-  color: black;
-  background-color: #d1e8e2;
+.search {
+  display: flex;
+  justify-content: space-around;
 }
 
-::placeholder {
-  color: black;
-  font-family: Lucida Sans;
-}
 .users {
   display: grid;
   grid-template-columns: 33% 33% 33%;
@@ -32,7 +19,7 @@ input[type="text"] {
   display: flex;
   justify-content: space-around;
   padding-top: 5px;
-  height: 300px;
+  height: 400px;
   width: auto;
   margin: 10px 20px;
   border: 2px solid #ffcb9a;
@@ -42,7 +29,7 @@ input[type="text"] {
 .userinfo {
   text-align: center;
   height: fit-content;
-  width: 30%;
+  /* width: 30%; */
   margin-left: 50px;
 }
 .userinfo img {
@@ -54,13 +41,13 @@ input[type="text"] {
   max-height: 95%;
 }
 .hobby_pics {
-  width: 80%;
-  max-height: 75%;
+  width: 130%;
+  max-height: 100%;
   overflow-y: auto;
 }
 .hobby_pics img {
   width: 100%;
 }
-.hobby_pics h2 {
+/* .hobby_pics h2 {
   text-align: center;
-}
+} */

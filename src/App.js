@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import Nav from "./components/nav";
-import Update from "./components/update";
+// import Update from "./components/update";
 import Feed from "./components/Feed";
 import Hobbies from "./components/Hobbies";
 import Loading from "./components/Loading";
@@ -44,12 +44,12 @@ function App() {
 
   const menuItems = [...new Set(allUsers.map((el) => el.skill))];
 
-//filter items
-const filterUsers = (cat) => {
-  const filteredUsers = allUsers.filter((val) => val.skill === cat);
-  setUsers(filteredUsers);
-  // setActiveHobby(cat);
-};
+  //filter items
+  const filterUsers = (cat) => {
+    const filteredUsers = allUsers.filter((val) => val.skill === cat);
+    setUsers(filteredUsers);
+    // setActiveHobby(cat);
+  };
 
   const renderContent = () => {
     if (loading) {
@@ -61,8 +61,8 @@ const filterUsers = (cat) => {
         <div className="app">
           <Nav />
           <div className="home">
-            <Update />
-            <Hobbies menuItems={menuItems} filterUsers={filterUsers} resetUsers={() => setUsers(allUsers)}/>
+            {/* <Update /> */}
+            <Hobbies menuItems={menuItems} filterUsers={filterUsers} resetUsers={() => setUsers(allUsers)} />
           </div>
           <Feed users={users} />
         </div>

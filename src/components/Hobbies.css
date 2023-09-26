@@ -1,9 +1,10 @@
 .hobby {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  width: 40vw;
+  flex-wrap: no-wrap;
+  /* align-items: center; */
+  width: 70vw;
+  overflow-x: auto;
+  margin: 20px;
   height: auto;
 }
 
@@ -17,12 +18,6 @@
   border-radius: 20px;
   box-shadow: 10px 10px 5px #2c3531;
 }
-
-/* .btn {
-  display: flex;
-  align-items: center;
-  margin-top: 20px;
-} */
 
 .result p {
   display: block;
