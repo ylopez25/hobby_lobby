@@ -9,7 +9,7 @@ export default function Hobbies({ menuItems, filterUsers, resetUsers }) {
         {menuItems?.map((hobby) => {
           return (
             <p
-              style={activeHobby === hobby ? { backgroundColor: "#d1e8e2" } : { backgroundColor: "#116466" }}
+              style={activeHobby === hobby ? { backgroundColor: "#d1e8e2" } : { backgroundColor: "white" }}
               onClick={() => {
                 setActiveHobby(hobby);
                 filterUsers(hobby);

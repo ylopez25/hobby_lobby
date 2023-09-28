@@ -2,7 +2,7 @@
     display:grid;
     align-items: center;
     justify-content: center;
-    width: inherit;
+    width: 100%;
     color:red;
     height:90vh;
     background-color: aliceblue;

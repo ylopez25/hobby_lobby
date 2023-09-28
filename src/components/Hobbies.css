@@ -1,7 +1,6 @@
 .hobby {
   display: flex;
   flex-wrap: no-wrap;
-  /* align-items: center; */
   width: 70vw;
   overflow-x: auto;
   margin: 20px;
@@ -10,18 +9,16 @@
 
 .hobby p {
   color: black;
-  border: 3px solid #d1e8e2;
+  border: 2px solid black;
   padding: 15px 20px 20px 20px;
   margin: 5px;
   margin-top: 20px;
   height: 3%;
   border-radius: 20px;
-  box-shadow: 10px 10px 5px #2c3531;
 }
 
 .result p {
   display: block;
   align-items: start;
   justify-content: space-between;
-
 }

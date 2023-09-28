@@ -6,12 +6,11 @@
 .users {
   display: grid;
   grid-template-columns: 33% 33% 33%;
-  border: 3px solid #d1e8e2;
+  /* border: 3px solid #d1e8e2; */
   width: 80vw;
   height: 100vh;
   margin: 10px 100px 70px 100px;
   padding: 35px;
-  background-color: #116466;
   overflow-y: auto;
   color: black;
 }
@@ -22,7 +21,7 @@
   height: 400px;
   width: auto;
   margin: 10px 20px;
-  border: 2px solid #ffcb9a;
+  /* border: 2px solid #ffcb9a; */
   border-radius: 10px;
   background-color: #d1e8e2;
 }
@@ -48,6 +47,3 @@
 .hobby_pics img {
   width: 100%;
 }
-/* .hobby_pics h2 {
-  text-align: center;
-} */
