@@ -1,8 +1,22 @@
-.nav{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 100px;
-    width:100%;
-    margin-top:20px;
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  margin-top: 20px;
+  margin: 10px;
+  font-size: large;
+  font-weight: 500;
+}
+
+.nav_left {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+}
+.nav_right {
+  display: flex;
+  justify-content: space-between;
+  width: 10%;
 }
