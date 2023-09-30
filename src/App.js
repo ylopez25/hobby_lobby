@@ -6,6 +6,7 @@ import Feed from "./components/Feed";
 import Hobbies from "./components/Hobbies";
 import Loading from "./components/Loading";
 import Error from "./components/Error";
+import Search from "./components/Search";
 
 function App() {
   const [users, setUsers] = useState([]);
@@ -60,6 +61,7 @@ function App() {
       return (
         <div className="app">
           <Nav />
+            <Search users={users}/>
           <div className="home">
             {/* <Update /> */}
             <Hobbies menuItems={menuItems} filterUsers={filterUsers} resetUsers={() => setUsers(allUsers)} />

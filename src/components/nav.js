@@ -1,4 +1,5 @@
 import React from "react";
+import logo from "./Your paragraph text.png";
 import "./nav.css";
 import { createSvgIcon } from "@mui/material/utils";
 import ManageAccountsIcon from "@mui/icons-material/ManageAccounts";
@@ -14,6 +15,10 @@ const PlusIcon = createSvgIcon(
 export default function nav() {
   return (
     <div className="nav">
+      <div>
+
+        <img src={logo} style={{ width:"40px" }} alt='logo'/>
+      </div>
       <div>
         <HomeIcon fontSize="large" />
       </div>

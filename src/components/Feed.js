@@ -81,13 +81,13 @@ export default function Feed({ users }) {
 
   return (
     <div>
-      <div className="search">
+      {/* <div className="search">
         <TextField id="outlined-controlled" value={search} onChange={handleChange} label="USERNAME OR CITY" size="small" halfWidth focused />
         <ToggleButtonGroup>
           <ToggleButton onClick={showAll}>Expand all imgs</ToggleButton>
           <ToggleButton onClick={closeAll}>Close all imgs</ToggleButton>
         </ToggleButtonGroup>
-      </div>
+      </div> */}
       <div className="users">{renderContent()}</div>
     </div>
   );

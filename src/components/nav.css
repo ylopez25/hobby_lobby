@@ -1,7 +1,8 @@
 .nav{
     display: flex;
     justify-content: space-around;
-    height: 50px;
+    align-items: center;
+    height: 100px;
     width:100%;
     margin-top:20px;
 }

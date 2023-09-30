@@ -3,8 +3,9 @@ body {
   justify-content: center;
   background-color: #C0CFE7;
   color: black;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Mona Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+
 .home {
   display: flex;
   justify-content: center;

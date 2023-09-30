@@ -5,11 +5,17 @@
   overflow-x: auto;
   margin: 20px;
   height: auto;
+  margin-top: 60px;
+}
+
+.hobby::-webkit-scrollbar{
+  display:none;
 }
 
 .hobby p {
   color: black;
-  border: 2px solid black;
+  /* border: 2px solid black; */
+  background-color: none;
   padding: 15px 20px 20px 20px;
   margin: 5px;
   margin-top: 20px;
