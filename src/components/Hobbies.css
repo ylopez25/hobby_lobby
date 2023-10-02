@@ -1,29 +1,29 @@
+.hobbies {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
 .hobby {
   display: flex;
   flex-wrap: no-wrap;
   overflow-x: auto;
-  margin: 20px;
-  height: auto;
-  margin-top: 60px;
+  width: 50%;
 }
 
-.hobby::-webkit-scrollbar{
-  display:none;
+.hobby::-webkit-scrollbar {
+  display: none;
 }
 
-.hobby p {
+.hobbies p {
+  display: flex;
+  justify-content: center;
   color: black;
-  /* border: 2px solid black; */
-  /* background-color: none; */
-  padding: 15px 20px 20px 20px;
-  margin: 5px;
-  margin-top: 20px;
-  height: 3%;
-  border-radius: 20px;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  white-space: nowrap;
 }
 
-.result p {
-  display: block;
-  align-items: start;
-  justify-content: space-between;
+.hobbies_all p {
+  border: 2px solid;
 }

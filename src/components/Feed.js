@@ -51,27 +51,27 @@ export default function Feed({ users }) {
         console.log(user.photodump, "user");
         return (
           <div className="userCard">
-            <div className="hobby">
+            <div className="gallery">
               {expand.includes(user.id) ? (
-                <div className="hobby_pics">
+                <div className="gallery_pics">
                   {photos?.map((img, id) => (
                     <img key={id} src={img} alt="img" />
                   ))}
                 </div>
               ) : (
-                <div className="hobby_pics">
+                <div className="gallery_pic">
                   <img src={photos[0]} alt="img" />
                 </div>
               )}
-            </div>
-                {" "}
+            </div>{" "}
             <div className="userinfo">
-              <h3>{user.username} </h3>
-              <img src={user.pic} alt="img" />
-              {/* <p>Hobby: {user.skill}</p>
-              <p>City: {user.city}</p> */}
-                <button onClick={() => handleToggle(user.id)}> {expand.includes(user.id) ? "Collapse " : "Gallery"}</button>
+              <div className="userinfo_left">
+                <p>{user.username} </p>
+                <img src={user.pic} alt="img" />
+              </div>
               <div>
+                <button onClick={() => handleToggle(user.id)}> {expand.includes(user.id) ? "- " : "+"}</button>
+                <button onClick={() => handleToggle(user.id)}> {expand.includes(user.id) ? "- " : "+"}</button>
               </div>
             </div>
           </div>

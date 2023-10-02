@@ -6,11 +6,3 @@ body {
   font-family: "Mona Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.home {
-  display: flex;
-  justify-content: center;
-}
-.live {
-  display: flex;
-  justify-content: center;
-}

@@ -19,6 +19,8 @@ export default function Hobbies({ menuItems, filterUsers, resetUsers }) {
             </p>
           );
         })}
+      </div>
+      <div className="hobbies_all">
         <p
           style={resetUsers ? { backgroundColor: "#d1e8e2" } : { backgroundColor: "#116466" }}
           onClick={() => {
