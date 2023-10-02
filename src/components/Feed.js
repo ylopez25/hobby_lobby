@@ -51,15 +51,6 @@ export default function Feed({ users }) {
         console.log(user.photodump, "user");
         return (
           <div className="userCard">
-            <div className="userinfo">
-              <h3>{user.username} </h3>
-              <img src={user.pic} alt="img" />
-              <p>Hobby: {user.skill}</p>
-              <p>City: {user.city}</p>
-              <div>
-                <button onClick={() => handleToggle(user.id)}> {expand.includes(user.id) ? "Collapse " : "Gallery"}</button>
-              </div>
-            </div>
             <div className="hobby">
               {expand.includes(user.id) ? (
                 <div className="hobby_pics">
@@ -72,6 +63,16 @@ export default function Feed({ users }) {
                   <img src={photos[0]} alt="img" />
                 </div>
               )}
+            </div>
+                {" "}
+            <div className="userinfo">
+              <h3>{user.username} </h3>
+              <img src={user.pic} alt="img" />
+              {/* <p>Hobby: {user.skill}</p>
+              <p>City: {user.city}</p> */}
+                <button onClick={() => handleToggle(user.id)}> {expand.includes(user.id) ? "Collapse " : "Gallery"}</button>
+              <div>
+              </div>
             </div>
           </div>
         );

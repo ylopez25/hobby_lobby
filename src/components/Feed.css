@@ -2,34 +2,40 @@
   display: flex;
   justify-content: space-around;
 }
-
 .users {
   display: grid;
-  grid-template-columns: 33% 33% 33%;
-  /* border: 3px solid #d1e8e2; */
-  width: 80vw;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+.userCard {
+  padding-top: 5px;
+  height: 700px;
+  width:auto;
+  margin: 10px 20px;
+  border-radius: 10px;
+  background-color: #d1e8e2;
+}
+/* 
+.users {
+  display: grid;
+  grid-template-columns: 30% 25%;
+  width: 90vw;
   height: 100vh;
-  margin: 10px 100px 70px 100px;
   padding: 35px;
   overflow-y: auto;
   color: black;
-}
-.userCard {
-  display: flex;
-  justify-content: space-around;
+} */
+/* .userCard {
   padding-top: 5px;
-  height: 400px;
-  width: auto;
+  height: 700px;
+  width:auto;
   margin: 10px 20px;
-  /* border: 2px solid #ffcb9a; */
   border-radius: 10px;
   background-color: #d1e8e2;
 }
 .userinfo {
+  display: flex;
+  justify-content: space-evenly;
   text-align: center;
-  height: fit-content;
-  /* width: 30%; */
-  margin-left: 50px;
 }
 .userinfo img {
   border-radius: 70%;
@@ -40,10 +46,9 @@
   max-height: 95%;
 }
 .hobby_pics {
-  width: 130%;
-  max-height: 100%;
-  overflow-y: auto;
+  width: 50%;
+  max-height: 50%;
 }
 .hobby_pics img {
-  width: 100%;
-}
+  width: 40%;
+} */
