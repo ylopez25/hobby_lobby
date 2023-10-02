@@ -5,7 +5,9 @@ export default function Hobbies({ menuItems, filterUsers, resetUsers }) {
   const [activeHobby, setActiveHobby] = useState(null);
   return (
     <div className="hobbies">
+      <p>&#60;</p>
       <div className="hobby">
+        <div></div>
         {menuItems?.map((hobby) => {
           return (
             <p
@@ -20,9 +22,9 @@ export default function Hobbies({ menuItems, filterUsers, resetUsers }) {
           );
         })}
       </div>
+      <p>&#62;</p>
       <div className="hobbies_all">
         <p
-          style={resetUsers ? { backgroundColor: "#d1e8e2" } : { backgroundColor: "#116466" }}
           onClick={() => {
             setActiveHobby(null);
             resetUsers();

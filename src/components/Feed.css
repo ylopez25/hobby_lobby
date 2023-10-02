@@ -5,9 +5,8 @@
 .users {
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
-  width: 95vw;
-  height: 100vh;
-  overflow-y: auto;
+  width: 100%;
+  height: 100px;
 }
 .userCard {
   width: auto;
@@ -17,18 +16,25 @@
 
 .userinfo img {
   border-radius: 50%;
+  width: 30px;
+  height: 30px;
   background-color: black;
 }
 .userinfo {
   display: flex;
   justify-content: space-around;
   height: 30px;
+  margin-top: 5px;
+  margin-bottom: 10px;
 }
 
 .userinfo_left {
   display: flex;
-  justify-content: space-around;
-  margin-top: 0px;
+  align-items: center;
+  width: 50%;
+}
+.userinfo_left p {
+  margin: 20px;
 }
 .gallery {
   display: flex;
@@ -36,21 +42,22 @@
   height: 400px;
   width: auto;
   overflow-y: scroll;
+  margin-bottom: 10px;
 }
 
 .gallery_pics img {
   display: flex;
   justify-content: center;
-  width: 440px;
+  width: 400px;
   height: 98%;
-  border-radius: 10px;
-  margin: 5px;
+  border-radius: 15px;
+  margin-bottom: 5px;
 }
 
 .gallery_pic img {
   display: flex;
   justify-content: center;
-  width: 440px;
+  width: 400px;
   height: 98%;
-  border-radius: 10px;
+  border-radius: 15px;
 }

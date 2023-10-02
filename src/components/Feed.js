@@ -48,7 +48,6 @@ export default function Feed({ users }) {
     } else {
       return displayUsers.map((user) => {
         const photos = user.photodump;
-        console.log(user.photodump, "user");
         return (
           <div className="userCard">
             <div className="gallery">
@@ -66,8 +65,8 @@ export default function Feed({ users }) {
             </div>{" "}
             <div className="userinfo">
               <div className="userinfo_left">
-                <p>{user.username} </p>
                 <img src={user.pic} alt="img" />
+                <p>{user.username} </p>
               </div>
               <div>
                 <button onClick={() => handleToggle(user.id)}> {expand.includes(user.id) ? "- " : "+"}</button>

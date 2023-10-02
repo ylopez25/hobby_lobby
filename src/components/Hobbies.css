@@ -2,6 +2,8 @@
   display: flex;
   justify-content: center;
   margin-top: 60px;
+  font-size: medium;
+  font-weight: 450;
 }
 .hobby {
   display: flex;
@@ -23,7 +25,6 @@
   border-radius: 5px;
   white-space: nowrap;
 }
-
-.hobbies_all p {
-  border: 2px solid;
+.hobbies_all p:hover {
+  background-color: rgb(203, 198, 198);
 }
