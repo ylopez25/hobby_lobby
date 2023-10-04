@@ -10,17 +10,21 @@ export default function Search({ users }) {
     const input = e.target.value;
     setSearch(input);
   };
-  //  let displayUsers = users;
-  //     if(search) {
-  //         displayUsers = users.filter((user) => {
-  //             const {username,city} = user;
-  //             const fullUsername = `${username} ${city}`.toLowerCase();
-  //             return fullUsername.includes(search.toLowerCase());
-  //         })
-  //     }
+  let displayUsers = users;
+  if (search) {
+    displayUsers = users.filter((user) => {
+      const { username, city } = user;
+      const fullUsername = `${username} ${city}`.toLowerCase();
+      return fullUsername.includes(search.toLowerCase());
+    });
+  }
+
   return (
-    <div className="search">
-      <input type="search" placeholder="Search..." value={search} onChange={handleChange} />
+    <div>
+      <div className="search">
+        <input type="search" placeholder="Search..." value={search} onChange={handleChange} />
+      </div>
+      <Feed displayUsers={displayUsers} search={search} users={users} />
     </div>
   );
 }

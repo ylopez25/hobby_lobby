@@ -62,11 +62,7 @@ function App() {
         <div className="app">
           <Nav />
             <Search users={users}/>
-          <div className="home">
-            {/* <Update /> */}
-            <Hobbies menuItems={menuItems} filterUsers={filterUsers} resetUsers={() => setUsers(allUsers)} />
-          </div>
-          <Feed users={users} />
+            <Hobbies menuItems={menuItems} filterUsers={filterUsers} resetUsers={() => setUsers(allUsers)} />     
         </div>
       );
     }

@@ -1,27 +1,11 @@
 import React from "react";
 import { useState } from "react";
 import "./Feed.css";
-import TextField from "@mui/material/TextField";
 import ToggleButton from "@mui/material/ToggleButton";
 import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 
-export default function Feed({ users }) {
-  const [search, setSearch] = useState("");
+export default function Feed({ users, displayUsers, search }) {
   const [expand, setExpanded] = useState([]);
-
-  const handleChange = (e) => {
-    setSearch(e.target.value);
-  };
-
-  let displayUsers = users;
-
-  if (search) {
-    displayUsers = users.filter((user) => {
-      const { username, city } = user;
-      const fullUsername = `${username} ${city}`.toLowerCase();
-      return fullUsername.includes(search.toLowerCase());
-    });
-  }
 
   const handleToggle = (id) => {
     if (!expand.includes(id)) {
@@ -33,13 +17,12 @@ export default function Feed({ users }) {
     }
   };
 
-  //create a function that will expand all ids
-  const showAll = () => {
+  const showAllimgs = () => {
     const allIds = users.map((user) => user.id);
     setExpanded(allIds);
   };
-  //create a function thast will close all
-  const closeAll = () => {
+
+  const closeAllimgs = () => {
     setExpanded([]);
   };
   const renderContent = () => {
@@ -81,13 +64,10 @@ export default function Feed({ users }) {
 
   return (
     <div>
-      {/* <div className="search">
-        <TextField id="outlined-controlled" value={search} onChange={handleChange} label="USERNAME OR CITY" size="small" halfWidth focused />
-        <ToggleButtonGroup>
-          <ToggleButton onClick={showAll}>Expand all imgs</ToggleButton>
-          <ToggleButton onClick={closeAll}>Close all imgs</ToggleButton>
-        </ToggleButtonGroup>
-      </div> */}
+      <ToggleButtonGroup>
+        <ToggleButton onClick={showAllimgs}>Expand all imgs</ToggleButton>
+        <ToggleButton onClick={closeAllimgs}>Close all imgs</ToggleButton>
+      </ToggleButtonGroup>
       <div className="users">{renderContent()}</div>
     </div>
   );
