@@ -5,8 +5,7 @@
 .users {
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
-  width: 100%;
-  height: 100px;
+  margin: 30px 100px;
 }
 .userCard {
   width: auto;
@@ -39,17 +38,17 @@
 .gallery {
   display: flex;
   justify-content: center;
-  height: 400px;
-  width: auto;
-  overflow-y: scroll;
+  max-height: 350px;
   margin-bottom: 10px;
+  overflow-y: auto;
+  width: 100%;
 }
 
 .gallery_pics img {
   display: flex;
   justify-content: center;
-  width: 400px;
-  height: 98%;
+  width: 300px;
+  height: 100%;
   border-radius: 15px;
   margin-bottom: 5px;
 }
@@ -57,7 +56,17 @@
 .gallery_pic img {
   display: flex;
   justify-content: center;
-  width: 400px;
-  height: 98%;
+  width: 300px;
+  height: 100%;
   border-radius: 15px;
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f10a;
+}
+::-webkit-scrollbar-thumb {
+  background: #0a3768;
+  border-radius: 20px;
 }
