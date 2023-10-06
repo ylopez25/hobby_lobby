@@ -2,12 +2,11 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import Nav from "./components/nav";
 // import Update from "./components/update";
-import Feed from "./components/Feed";
 import Hobbies from "./components/Hobbies";
 import Loading from "./components/Loading";
 import Error from "./components/Error";
 import Search from "./components/Search";
-
+import Home from "./components/Home";
 function App() {
   const [users, setUsers] = useState([]);
   const [allUsers, setAllUsers] = useState([]);
@@ -61,6 +60,7 @@ function App() {
       return (
         <div className="app">
           <Nav />
+          <Home />
             <Search users={users}/>
             <Hobbies menuItems={menuItems} filterUsers={filterUsers} resetUsers={() => setUsers(allUsers)} />     
         </div>

@@ -23,6 +23,10 @@ export default function Search({ users }) {
     <div>
       <div className="search">
         <input type="search" placeholder="Search..." value={search} onChange={handleChange} />
+        <select name="city" id="city">
+          <option value="brooklyn">Brooklyn</option>
+          <option value="New York">New York</option>
+        </select>
       </div>
       <Feed displayUsers={displayUsers} search={search} users={users} />
     </div>
