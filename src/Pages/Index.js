@@ -13,13 +13,14 @@ export default function Index() {
   const [err, setErr] = useState("");
 
   const API_URL = process.env.REACT_APP_API_URL;
+
   useEffect(() => {
     console.log("app rendered");
     async function fetchData() {
       try {
         setErr("");
         setLoading(true);
-        const res = await fetch(`${API_URL}/users`);
+        const res = await fetch(`${API_URL}/v2/users?include=photos`);
         const json = await res.json();
         console.log(json, "json");
         const { data, err } = json;

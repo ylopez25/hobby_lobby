@@ -13,8 +13,8 @@ export default function Search({ users }) {
   let displayUsers = users;
   if (search) {
     displayUsers = users.filter((user) => {
-      const { username, city } = user;
-      const fullUsername = `${username} ${city}`.toLowerCase();
+      const { user_name, city } = user;
+      const fullUsername = `${user_name} ${city}`.toLowerCase();
       return fullUsername.includes(search.toLowerCase());
     });
   }

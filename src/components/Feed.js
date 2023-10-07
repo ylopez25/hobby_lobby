@@ -30,26 +30,26 @@ export default function Feed({ users, displayUsers, search }) {
       return `No results for ${search}`;
     } else {
       return displayUsers.map((user) => {
-        const photos = user.photodump;
+        const photos = user.photos;
         return (
           <div className="userCard">
             <div className="gallery">
               {expand.includes(user.id) ? (
                 <div className="gallery_pics">
                   {photos?.map((img, id) => (
-                    <img key={id} src={img} alt="img" />
+                    <img key={id} src={img.photo} alt="img" />
                   ))}
                 </div>
               ) : (
                 <div className="gallery_pic">
-                  <img src={photos[0]} alt="img" />
+                  <img src={photos[0].photo} alt='img'/>
                 </div>
               )}
             </div>{" "}
             <div className="userinfo">
               <div className="userinfo_left">
                 <img src={user.pic} alt="img" />
-                <p>{user.username} </p>
+                <p>{user.user_name} </p>
               </div>
               <div>
                 <button onClick={() => handleToggle(user.id)}> {expand.includes(user.id) ? "- " : "+"}</button>
