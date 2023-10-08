@@ -7,16 +7,16 @@ export default function nav() {
     <div className="nav">
       <div className="nav_left">
         <h3>
-          <Link to="/">HL</Link>
+          <Link to="/" style={{textDecoration:"none", color:"black"}}>HL</Link>
         </h3>
         <p>
-          <Link to="/users">Inspiration</Link>
+          <Link to="/users" style={{textDecoration:"none", color:"black"}}>Inspiration</Link>
         </p>
         <p>
-          <Link to="/create">Create</Link>
+          <Link to="/create" style={{textDecoration:"none", color:"black"}}>Create</Link>
         </p>
         <p>
-          <Link to="/profile">Profile</Link>
+          <Link to="/profile" style={{textDecoration:"none", color:"black"}}>Profile</Link>
         </p>
         <p>Focus</p>
         <p>Settings</p>
