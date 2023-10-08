@@ -8,5 +8,6 @@
 }
 .profile_icons{
     display:flex;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 50px;
 }
