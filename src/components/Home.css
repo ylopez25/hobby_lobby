@@ -8,3 +8,13 @@
     line-height: 1.25;
     text-align: center;
 }
+.home p{
+    display: flex;
+    justify-content: center;
+    font-size: 34px;
+    font-family: "Source Serif Pro", serif;
+    font-weight: 400;
+    letter-spacing: -1px;
+    line-height: 1.25;
+    text-align: center;
+}

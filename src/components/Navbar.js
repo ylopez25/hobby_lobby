@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./nav.css";
+import "./Navbar.css";
 
 export default function nav() {
   return (
@@ -13,10 +13,10 @@ export default function nav() {
           <Link to="/users">Inspiration</Link>
         </p>
         <p>
-          <Link>Create</Link>
+          <Link to="/create">Create</Link>
         </p>
         <p>
-          <Link>Profile</Link>
+          <Link to="/profile">Profile</Link>
         </p>
         <p>Focus</p>
         <p>Settings</p>

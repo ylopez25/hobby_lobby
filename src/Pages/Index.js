@@ -3,14 +3,29 @@ import Search from "../components/Search.js";
 import Hobbies from "../components/Hobbies.js";
 import Loading from "../components/Loading.js";
 import Error from "../components/Error.js";
+import Feed from "../components/Feed.js";
 
 import { useState, useEffect } from "react";
 
 export default function Index() {
+  const [search, setSearch] = useState("");
   const [users, setUsers] = useState([]);
   const [allUsers, setAllUsers] = useState([]);
   const [loading, setLoading] = useState(true);
   const [err, setErr] = useState("");
+
+  const handleChange = (e) => {
+    const input = e.target.value;
+    setSearch(input);
+  };
+  let displayUsers = users;
+  if (search) {
+    displayUsers = users.filter((user) => {
+      const { user_name, city } = user;
+      const fullUsername = `${user_name} ${city}`.toLowerCase();
+      return fullUsername.includes(search.toLowerCase());
+    });
+  }
 
   const API_URL = process.env.REACT_APP_API_URL;
 
@@ -43,11 +58,9 @@ export default function Index() {
 
   const menuItems = [...new Set(allUsers.map((el) => el.skill))];
 
-  //filter items
   const filterUsers = (cat) => {
     const filteredUsers = allUsers.filter((val) => val.skill === cat);
     setUsers(filteredUsers);
-    // setActiveHobby(cat);
   };
 
   const renderContent = () => {
@@ -58,8 +71,9 @@ export default function Index() {
     } else {
       return (
         <div className="app">
-          <Search users={users} />
+          <Search users={users} search={search} handleChange={handleChange} />
           <Hobbies menuItems={menuItems} filterUsers={filterUsers} resetUsers={() => setUsers(allUsers)} />
+          <Feed displayUsers={displayUsers} search={search} users={users} />
         </div>
       );
     }

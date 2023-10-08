@@ -1,0 +1,13 @@
+.profile_info {
+  border: 3px solid #D1E8E2;
+  padding:30px;
+  font-size: large;
+}
+.profile_username {
+  display: flex;
+  justify-content: space-evenly;
+}
+.profile_imgupload {
+  display: flex;
+  justify-content: space-evenly;
+}

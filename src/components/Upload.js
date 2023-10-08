@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import "./update.css";
+import "./Upload.css";
 
 export default function Update() {
   const [imgfile, uploadimg] = useState([]);
@@ -12,12 +12,12 @@ export default function Update() {
   };
 
   return (
-    <div class="profile_info">
-      <div class="profile_username">
+    <div className="profile_info">
+      <div className="profile_username">
         <h1>Username</h1>
         <p>Status:Live</p>
       </div>
-      <div class="profile_imgupload">
+      <div className="profile_imgupload">
         <div>
           <h2>Upload</h2>
           <input type="file" onChange={imgFilehandler} />
@@ -25,7 +25,6 @@ export default function Update() {
           <button>upload</button>
           <button>clear</button>
         </div>
-        <div></div>
         <div>
           <h3>Preview</h3>
           {imgfile.map((elem) => {

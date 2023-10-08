@@ -9,7 +9,7 @@ export default function Home() {
         <h2>"Creativity is intelligence having fun."</h2>
         </div>
         <div>
-        <p>Being creative is not a hobby. It's a way of life.</p>
+        <p>It's not the skill. It's the will...</p>
         </div>
         <Hobbies />
     </div>
