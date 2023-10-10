@@ -13,12 +13,30 @@ export default function Index() {
   const [allUsers, setAllUsers] = useState([]);
   const [loading, setLoading] = useState(true);
   const [err, setErr] = useState("");
+  const [selectedCity, setSelectedCity] = useState();
+
+  let displayUsers = users;
+  
+  //handleselected
+  // const handleSelected = (e) => {
+  //     const city = users.find(el => el.city === e.target.value)
+  //     console.log(city)
+  //   setSelectedCity(city)
+  // }
+
+  //if(selected) ...
+if(selectedCity) {
+displayUsers = users.filter((user) => {
+  return user.id.includes(user.city)
+})
+}
+
 
   const handleChange = (e) => {
     const input = e.target.value;
     setSearch(input);
   };
-  let displayUsers = users;
+
   if (search) {
     displayUsers = users.filter((user) => {
       const { user_name, city } = user;
