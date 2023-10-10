@@ -1,3 +1,8 @@
+.expand {
+display: flex;
+justify-content: center;
+background-color: red;
+}
 .search {
   display: flex;
   justify-content: space-around;

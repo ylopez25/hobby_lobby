@@ -13,6 +13,8 @@ export default function Index() {
   const [allUsers, setAllUsers] = useState([]);
   const [loading, setLoading] = useState(true);
   const [err, setErr] = useState("");
+  const [cities, setCities] = useState([]);
+
   const [selectedCity, setSelectedCity] = useState();
 
   let displayUsers = users;
@@ -25,11 +27,11 @@ export default function Index() {
   // }
 
   //if(selected) ...
-if(selectedCity) {
-displayUsers = users.filter((user) => {
-  return user.id.includes(user.city)
-})
-}
+// if(selectedCity) {
+// displayUsers = users.filter((user) => {
+//   return user.id.includes(user.city)
+// })
+// }
 
 
   const handleChange = (e) => {
@@ -54,11 +56,14 @@ displayUsers = users.filter((user) => {
         setErr("");
         setLoading(true);
         const res = await fetch(`${API_URL}/v2/users?include=photos`);
+
         const json = await res.json();
         console.log(json, "json");
-        const { data, err } = json;
+        const { data, cities, err } = json;
         console.log(data, "data");
+        console.log(cities, 'cities');
         if (res.ok) {
+          setCities(cities);
           setUsers(data);
           setAllUsers(data);
           setLoading(false);
@@ -89,7 +94,8 @@ displayUsers = users.filter((user) => {
     } else {
       return (
         <div className="app">
-          <Search users={users} search={search} handleChange={handleChange} />
+
+          <Search users={users} search={search} handleChange={handleChange} cities={cities}/>
           <Hobbies menuItems={menuItems} filterUsers={filterUsers} resetUsers={() => setUsers(allUsers)} />
           <Feed displayUsers={displayUsers} search={search} users={users} />
         </div>

@@ -64,10 +64,11 @@ export default function Feed({ users, displayUsers, search }) {
 
   return (
     <div>
-      <ToggleButtonGroup>
-        <ToggleButton onClick={showAllimgs}>Expand all imgs</ToggleButton>
-        <ToggleButton onClick={closeAllimgs}>Close all imgs</ToggleButton>
+      <ToggleButtonGroup className="expand">
+        <ToggleButton onClick={showAllimgs}>Gallery Mode</ToggleButton>
+        <ToggleButton onClick={closeAllimgs}>Skim Mode</ToggleButton>
       </ToggleButtonGroup>
+
       <div className="users">{renderContent()}</div>
     </div>
   );
