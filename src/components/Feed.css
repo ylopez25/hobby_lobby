@@ -1,16 +1,17 @@
+.expand {
+display: flex;
+justify-content: center;
+background-color: red;
+}
 .search {
   display: flex;
   justify-content: space-around;
 }
 .users {
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
-  margin: 30px 100px;
-}
-.userCard {
-  width: auto;
-  height: auto;
-  margin: 20px;
+  grid-template-columns: auto auto auto auto;
+  grid-gap:36px;
+  margin:30px;
 }
 
 .userinfo img {
@@ -41,14 +42,14 @@
   max-height: 350px;
   margin-bottom: 10px;
   overflow-y: auto;
-  width: 100%;
+  margin:0px;
 }
 
 .gallery_pics img {
   display: flex;
   justify-content: center;
-  width: 300px;
-  height: 100%;
+  width:450px;
+  height:350px;
   border-radius: 15px;
   margin-bottom: 5px;
 }
@@ -56,8 +57,8 @@
 .gallery_pic img {
   display: flex;
   justify-content: center;
-  width: 300px;
-  height: 100%;
+  width:450px;
+  height:350px;
   border-radius: 15px;
 }
 ::-webkit-scrollbar {
