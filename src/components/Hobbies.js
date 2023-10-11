@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Hobbies.css";
 
-export default function Hobbies({ menuItems, filterUsers, resetUsers }) {
+export default function Hobbies({ menuItems, filterbySkill, resetUsers }) {
   const [activeHobby, setActiveHobby] = useState(null);
   return (
     <div className="hobbies">
@@ -14,7 +14,7 @@ export default function Hobbies({ menuItems, filterUsers, resetUsers }) {
               style={activeHobby === hobby ? { backgroundColor: "#d1e8e2" } : { backgroundColor: "#0000" }}
               onClick={() => {
                 setActiveHobby(hobby);
-                filterUsers(hobby);
+                filterbySkill(hobby);
               }}
             >
               {hobby}

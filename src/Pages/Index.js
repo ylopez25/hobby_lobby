@@ -15,30 +15,15 @@ export default function Index() {
   const [err, setErr] = useState("");
   const [cities, setCities] = useState([]);
 
-  const [selectedCity, setSelectedCity] = useState();
-
   let displayUsers = users;
-  
-  //handleselected
-  // const handleSelected = (e) => {
-  //     const city = users.find(el => el.city === e.target.value)
-  //     console.log(city)
-  //   setSelectedCity(city)
-  // }
 
-  //if(selected) ...
-// if(selectedCity) {
-// displayUsers = users.filter((user) => {
-//   return user.id.includes(user.city)
-// })
-// }
-
-
+  //search input change
   const handleChange = (e) => {
     const input = e.target.value;
     setSearch(input);
   };
 
+  //search filtering
   if (search) {
     displayUsers = users.filter((user) => {
       const { user_name, city } = user;
@@ -56,12 +41,11 @@ export default function Index() {
         setErr("");
         setLoading(true);
         const res = await fetch(`${API_URL}/v2/users?include=photos`);
-
         const json = await res.json();
         console.log(json, "json");
         const { data, cities, err } = json;
         console.log(data, "data");
-        console.log(cities, 'cities');
+        console.log(cities, "cities");
         if (res.ok) {
           setCities(cities);
           setUsers(data);
@@ -79,12 +63,25 @@ export default function Index() {
     fetchData();
   }, []);
 
+  //list of unique skills
   const menuItems = [...new Set(allUsers.map((el) => el.skill))];
 
-  const filterUsers = (cat) => {
+  //filter users by skill
+  const filterbySkill = (cat) => {
     const filteredUsers = allUsers.filter((val) => val.skill === cat);
     setUsers(filteredUsers);
   };
+
+  //city list menu
+  const citiesMenu = [...new Set(cities.map((el) => el.name))];
+  console.log(citiesMenu, 'list of cities')
+
+  //filter cities
+  const filterbyCity = (city) => {
+    const filterUsersCity = allUsers.filter((x) => x.city_name === city);
+    console.log(filterUsersCity, 'list of users?')
+    setUsers(filterUsersCity)
+  }
 
   const renderContent = () => {
     if (loading) {
@@ -94,10 +91,12 @@ export default function Index() {
     } else {
       return (
         <div className="app">
-
-          <Search users={users} search={search} handleChange={handleChange} cities={cities}/>
-          <Hobbies menuItems={menuItems} filterUsers={filterUsers} resetUsers={() => setUsers(allUsers)} />
-          <Feed displayUsers={displayUsers} search={search} users={users} />
+          <Search filterbyCity={filterbyCity} 
+          citiesMenu={citiesMenu}
+           search={search} 
+           handleChange={handleChange} />
+          <Hobbies menuItems={menuItems} filterbySkill={filterbySkill} resetUsers={() => setUsers(allUsers)} />
+          <Feed displayUsers={displayUsers} search={search} users={users} allUsers={allUsers} />
         </div>
       );
     }

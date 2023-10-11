@@ -4,7 +4,7 @@ import "./Feed.css";
 import ToggleButton from "@mui/material/ToggleButton";
 import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 
-export default function Feed({ users, displayUsers, search }) {
+export default function Feed({ users, displayUsers, search}) {
   const [expand, setExpanded] = useState([]);
 
   const handleToggle = (id) => {
@@ -42,14 +42,16 @@ export default function Feed({ users, displayUsers, search }) {
                 </div>
               ) : (
                 <div className="gallery_pic">
-                  <img src={photos[0].photo} alt='img'/>
+                  <img src={photos[0].photo} alt="img" />
                 </div>
               )}
             </div>{" "}
             <div className="userinfo">
               <div className="userinfo_left">
                 <img src={user.pic} alt="img" />
-                <p>{user.user_name} </p>
+                <p>
+                  {user.user_name}
+                </p>
               </div>
               <div>
                 <button onClick={() => handleToggle(user.id)}> {expand.includes(user.id) ? "- " : "+"}</button>
@@ -68,7 +70,6 @@ export default function Feed({ users, displayUsers, search }) {
         <ToggleButton onClick={showAllimgs}>Gallery Mode</ToggleButton>
         <ToggleButton onClick={closeAllimgs}>Skim Mode</ToggleButton>
       </ToggleButtonGroup>
-
       <div className="users">{renderContent()}</div>
     </div>
   );

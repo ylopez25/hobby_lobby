@@ -1,22 +1,20 @@
-import React from "react";
 import "./Search.css";
 
-export default function Search({ users, search, handleChange, cities }) {
+export default function Search({ filterbyCity, citiesMenu, search, handleChange }) {
+  const handleSelected = (e) => {
+    filterbyCity(e.target.value);
+  };
+
   return (
     <div>
       <div className="searchbar">
         <input type="search" placeholder="Search..." value={search} onChange={handleChange} />
 
-        <select
-        //  onChange={(e) => {
-        //   const city = cities.find(el => el.id === e.target.value)
-        //   console.log(city)
-        // }}
-        >
-          {cities?.map((city, id) => {
+        <select onChange={handleSelected}>
+          {citiesMenu?.map((city) => {
             return (
-              <option key={id} value={city.name}>
-                {city.name}
+              <option key={`city-${city.id}`} value={city}>
+                {city}
               </option>
             );
           })}
