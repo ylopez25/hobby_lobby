@@ -18,7 +18,9 @@ export default function nav() {
         <p>
           <Link to="/profile" style={{textDecoration:"none", color:"black"}}>Profile</Link>
         </p>
-        <p>Focus</p>
+        <p>
+          <Link to="/focus" style={{textDecoration:"none", color:"black"}}>Focus</Link>
+        </p>
         <p>Settings</p>
       </div>
       <div className="nav_right">
