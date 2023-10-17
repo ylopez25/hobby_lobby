@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function SignUp() {
   return (
-    <div className="signup template d-flex justify-content-center align-items-center vh-100 bg-primary">
+    <div className="signup template d-flex justify-content-center align-items-center vh-100">
       <div className="form_container p-5 rounded bg-white">
         <form>
           <h3 className="text-center">Sign Up</h3>
