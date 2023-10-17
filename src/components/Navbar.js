@@ -24,7 +24,9 @@ export default function nav() {
         <p>Settings</p>
       </div>
       <div className="nav_right">
-        <p>Login</p>
+        <p>
+          <Link to="/login" style={{textDecoration:"none", color:"black"}}> Login </Link>
+          </p>
         <p>Sign up</p>
       </div>
     </div>
