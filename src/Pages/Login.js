@@ -3,8 +3,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function Login() {
   return (
-    <div className="login template d-flex justify-content-center align-items-center vh-100">
-      <div className="form_container p-5 rounded pg-black">
+    <div className="login template d-flex justify-content-center align-items-center vh-100 bg-primary">
+      <div className="form_container p-5 rounded bg-white">
         <form>
           <h3 className="text-center">Sign In</h3>
           <div className="mb-2">
