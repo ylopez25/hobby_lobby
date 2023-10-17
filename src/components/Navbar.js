@@ -27,7 +27,9 @@ export default function nav() {
         <p>
           <Link to="/login" style={{textDecoration:"none", color:"black"}}> Login </Link>
           </p>
-        <p>Sign up</p>
+        <p>
+        <Link to="/signup" style={{textDecoration:"none", color:"black"}}>Sign Up </Link>
+        </p>
       </div>
     </div>
   );

@@ -7,6 +7,7 @@ import Create from "./Pages/Create";
 import Profile from "./Pages/Profile";
 // import Focus from "./Pages/Focus";
 import Login from "./Pages/Login";
+import SignUp from "./Pages/SignUp";
 import FourOFour from "./Pages/FourOFour";
 
 //Components
@@ -29,6 +30,7 @@ function App() {
             {/* <Route path="/focus" element={<Focus/>}/> */}
 
             <Route path="/login" element={<Login/>}/>
+            <Route path="/signup" element={<SignUp/>}/>
             <Route path="*" element={<FourOFour/>}/>
           </Routes>
         </main>
