@@ -5,11 +5,15 @@ import Home from "./Pages/Home";
 import Index from "./Pages/Index";
 import Create from "./Pages/Create";
 import Profile from "./Pages/Profile";
+// import Focus from "./Pages/Focus";
+import Login from "./Pages/Login";
+import SignUp from "./Pages/SignUp";
 import FourOFour from "./Pages/FourOFour";
 
 //Components
 import Navbar from "./components/Navbar";
 import "./App.css";
+//import { Login } from "@mui/icons-material";
 
 function App() {
   return (
@@ -22,7 +26,12 @@ function App() {
             <Route path="/users" element={<Index />} />
             <Route path="/create" element={<Create />} />
             <Route path="/profile" element={<Profile />} />
-            <Route path="*" element={<FourOFour />} />
+
+            {/* <Route path="/focus" element={<Focus/>}/> */}
+
+            <Route path="/login" element={<Login/>}/>
+            <Route path="/signup" element={<SignUp/>}/>
+            <Route path="*" element={<FourOFour/>}/>
           </Routes>
         </main>
       </Router>

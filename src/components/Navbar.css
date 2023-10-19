@@ -5,6 +5,7 @@
   font-size: large;
   font-weight: 450;
   margin-bottom: 20px;
+  background-color: white;
 }
 .nav_left {
   display: flex;
