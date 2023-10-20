@@ -1,27 +1,15 @@
-/* .pomodoro {
-    background-color: rgb(45, 57, 116);
-    height: 100vh;
-    padding-top: 50px;
-    margin:0 auto;
-    text-align: center;
-} */
 
 :root{
     --red: #f54e4e;
     --green: #4aec8c;
   }
-  
-  body{
-    background-color: #30384b;
-    color: #eee;
-  }
-  main{
+
+    .main{
     padding-top: 50px;
     max-width: 340px;
     margin: 0 auto;
     text-align: center;
   }
-  
   button{
     background-color: transparent;
     color: rgba(255,255,255,0.8);

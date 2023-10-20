@@ -12,7 +12,7 @@ export default function Focus() {
     const [breakMinutes, setBreakMinutes] = useState(15);
   
     return (
-      <main>
+      <main className = "main">
         <SettingsContext.Provider value={{
           showSettings,
           setShowSettings,
