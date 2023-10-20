@@ -5,7 +5,7 @@ import Home from "./Pages/Home";
 import Index from "./Pages/Index";
 import Create from "./Pages/Create";
 import Profile from "./Pages/Profile";
-// import Focus from "./Pages/Focus";
+import Focus from "./Pages/Focus";
 import Login from "./Pages/Login";
 import SignUp from "./Pages/SignUp";
 import FourOFour from "./Pages/FourOFour";
@@ -27,7 +27,7 @@ function App() {
             <Route path="/create" element={<Create />} />
             <Route path="/profile" element={<Profile />} />
 
-            {/* <Route path="/focus" element={<Focus/>}/> */}
+            <Route path="/focus" element={<Focus/>}/>
 
             <Route path="/login" element={<Login/>}/>
             <Route path="/signup" element={<SignUp/>}/>
