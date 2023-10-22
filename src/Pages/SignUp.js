@@ -1,7 +1,12 @@
 import { Link } from "react-router-dom";
+// import { useRef, useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function SignUp() {
+
+  // const USER_REGEX = /^[a-zA-z][a-zA-Z0-9-_]{3,23}$/;
+  // const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%]).{8,24}$/;
+
   return (
     <div className="signup template d-flex justify-content-center align-items-center vh-100">
       <div className="form_container p-5 rounded bg-white">
@@ -16,11 +21,11 @@ export default function SignUp() {
             <input type="text" placeholder="Enter Last Name" className="form-control" />
           </div>
           <div className="mb-2">
-            <label htmlFor="email"> Email:</label>
+            <label htmlFor="email">Password:</label>
             <input type="email" placeholder="Enter Email" className="form-control" />
           </div>
           <div className="mb-2">
-            <label htmlFor="password">Password:</label>
+            <label htmlFor="password">Confirm Password:</label>
             <input type="password" placeholder="Enter Password" className="form-control" />
           </div>
           <div className="d-grid mt-2">

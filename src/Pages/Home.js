@@ -1,6 +1,6 @@
 import React from 'react';
 import '../components/Home.css'
-import Hobbies from "../components/Hobbies.js"
+//import Hobbies from "../components/Hobbies.js"
 
 export default function Home() {
   return (
@@ -11,7 +11,7 @@ export default function Home() {
         <div>
         <p>It's not the skill. It's the will...</p>
         </div>
-        <Hobbies />
+        {/* <Hobbies /> */}
     </div>
   )
 }

@@ -1,6 +1,5 @@
 import React from "react";
 import "../components/Focus.css";
-// import Timer from "../components/Timer.js";
 import Timer from "../components/Timer";
 import Settings from "../components/Settings";
 import {useState} from "react";
