@@ -2,7 +2,69 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import "../components/Profile.css";
 
+import { useState, useEffect } from "react";
+
 export default function Profile() {
+  const [users, setUsers] = useState([]);
+  const [allUsers, setAllUsers] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [err, setErr] = useState("");
+  const [cities, setCities] = useState([]);
+
+
+  const API_URL = process.env.REACT_APP_API_URL;
+
+  useEffect(() => {
+    console.log("app rendered");
+    async function fetchData() {
+      try {
+        setErr("");
+        setLoading(true);
+        const res = await fetch(`${API_URL}/v2/users?include=photos`);
+        const json = await res.json();
+        console.log(json, "json");
+        const { data, cities, err } = json;
+        console.log(data, "data");
+        console.log(cities, "cities");
+        if (res.ok) {
+          setCities(cities);
+          setUsers(data);
+          setAllUsers(data);
+          setLoading(false);
+        } else {
+          setErr(err);
+          setLoading(false);
+        }
+      } catch (err) {
+        setLoading(false);
+        setErr(`err: ${err.message}`);
+      }
+    }
+    fetchData();
+  }, []);
+
+  const renderContent = () => {
+    if (users.length === 0) {
+      return `No results for ${search}`;
+    } else {
+      return users.map((user) => {
+        const photos = user.photos;
+        return (
+          <div className="userCard">
+  
+            <div className="userinfo">
+              <div className="userinfo_left">
+                <img src={user.pic} alt="img" />
+                <p>{user.user_name}</p>
+              </div>
+            
+            </div>
+          </div>
+        );
+      });
+    }
+  };
+
   return (
     <div className="profile">
       <div className='profile_details'>
@@ -27,6 +89,7 @@ export default function Profile() {
         <img src="1" alt="img1" />
         <img src="1" alt="img1" />
       </div>
+      {renderContent()}
     </div>
   )
 }
