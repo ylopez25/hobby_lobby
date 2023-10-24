@@ -12,6 +12,7 @@
     width: 200px;
     height: 200px;
     border-radius: 50%;
+    border: solid 1px;
 }
 .profile_icons{
     display:flex;
@@ -23,8 +24,11 @@
     margin: 30px;
 }
 .profile_gallery {
-    display: flex;
+    display: grid;
     justify-content: center;
+    grid-template-columns: auto auto auto auto;
+    grid-gap:36px;
+    /* margin:30px; */
 }
 
 .profile_gallery img {
@@ -32,5 +36,5 @@
     height: 300px;
     border:2px solid;
     border-radius: 20px;
-    margin:20px;
+    margin-bottom: 50px ;
 }
