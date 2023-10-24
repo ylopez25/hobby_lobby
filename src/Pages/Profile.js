@@ -50,9 +50,10 @@ export default function Profile() {
       return (
         <div className="profile">
       <div className="profile_details">
-        <img src="https://i.pinimg.com/280x280_RS/f2/bc/cf/f2bccfe2d804dd173c3e6f75d3e84ed7.jpg" alt="img" />
-        <h1>Yesenia Lopez</h1>
-        <p>@username</p>
+        <img src={users[0].pic} alt="img" />
+        <h1>{users[0].first_name}</h1>
+        <p>@{users[0].user_name}</p>
+        <p>{cities[0].name}</p>
         <button>Edit Profile</button>
       </div>
       <div className="profile_icons">
