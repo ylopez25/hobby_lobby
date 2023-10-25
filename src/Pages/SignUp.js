@@ -13,7 +13,7 @@ export default function SignUp() {
         <form>
           <h3 className="text-center">Sign Up</h3>
           <div className="mb-2">
-            <label htmlFor="fname"> First    Name:kjnkjn</label>
+            <label htmlFor="fname"> First Name:</label>
             <input type="text" placeholder="Enter First Name" className="form-control" />
           </div>
           <div className="mb-2">
