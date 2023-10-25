@@ -53,8 +53,8 @@ export default function Profile() {
         <img src={users[0].pic} alt="img" />
         <h1>{users[0].first_name}</h1>
         <p>@{users[0].user_name}</p>
+        <p>following: 47</p>
         <p>{cities[0].name}</p>
-        <button>Edit Profile</button>
       </div>
       <div className="profile_icons">
         <svg>
