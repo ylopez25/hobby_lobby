@@ -126,7 +126,7 @@ export default function SignUp() {
             </p>
           </div>
           <div className="d-grid mt-2">
-            <button className="btn btn-primary">Sign Up</button>
+            <button className="btn btn-primary" disabled={!validName || !validPwd || !validPwdMatch ? true : false}>Sign Up</button>
           </div>
           <p className="text-end mt-2">
             Already Registered
