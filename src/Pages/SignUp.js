@@ -51,7 +51,7 @@ export default function SignUp() {
     console.log(pwd);
     setValidPwd(result);
     const match = pwd === pwdMatch;
-    setValidPwd(match);
+    setValidPwdMatch(match);
   }, [pwd, pwdMatch]);
 
   //remove err message once theres a change in pwd
@@ -68,9 +68,9 @@ export default function SignUp() {
           </p>
           <h3 className="text-center">Sign Up</h3>
           <div className="mb-2">
-            <label htmlFor="fname">
+            <label htmlFor="username">
               {" "}
-              First Name:
+              Username:
               <span className={validName ? "valid" : "hide"}>
                 <FontAwesomeIcon icon={faCheck} />
               </span>
@@ -79,7 +79,7 @@ export default function SignUp() {
               </span>
             </label>
 
-            <input type="text" id="fname" ref={userRef} onChange={(e) => setUser(e.target.value)} required aria-invalid={validName ? "false" : "true"} aria-describedby="uidnote" onFocus={() => setUserFocus(true)} onBlur={() => setUserFocus(false)} placeholder="Enter First Name" className="form-control" />
+            <input type="text" id="username" ref={userRef} onChange={(e) => setUser(e.target.value)} required aria-invalid={validName ? "false" : "true"} aria-describedby="uidnote" onFocus={() => setUserFocus(true)} onBlur={() => setUserFocus(false)} placeholder="Enter First Name" className="form-control" />
 
             <p id="uidnote" className={userFocus && user && !validName ? "instructions" : "offscreen"}>
               <FontAwesomeIcon icon={faInfoCircle} />
@@ -89,16 +89,41 @@ export default function SignUp() {
             </p>
           </div>
           <div className="mb-2">
-            <label htmlFor="lname"> Last Name:</label>
-            <input type="text" placeholder="Enter Last Name" className="form-control" />
+            <label htmlFor="password">
+              Password:
+              <span className={validPwd ? "valid" : "hide"}>
+                <FontAwesomeIcon icon={faCheck} />
+              </span>
+              <span className={validPwd || !pwd ? "hide" : "invalid"}>
+                <FontAwesomeIcon icon={faTimes} />
+              </span>
+            </label>
+
+            <input type="password" id="password" onChange={(e) => setPwd(e.target.value)} required aria-invalid={validPwd ? "false" : "true"} aria-describedby="pwdnote" onFocus={() => setPwdFocus(true)} onBlur={() => setPwdFocus(false)} placeholder="Enter Password" className="form-control" />
+
+            <p id="pwdnote" className={pwdFocus && !validPwd ? "instructions" : "offscreen"}>
+              <FontAwesomeIcon icon={faInfoCircle} />
+              8 to 24 characters. <br />
+              Must include uppercase and lowercase letters, a number and a special character <br />
+              Allowed special characters:
+              <span aria-label="exclamation mark">!</span>
+              <span aria-label="at symbol">@</span>
+              <span aria-label="hashtag"> #</span>
+              <span aria-label="dollar sign">$</span>
+              <span aria-label="percent">%</span>
+            </p>
           </div>
           <div className="mb-2">
-            <label htmlFor="email">Password:</label>
-            <input type="email" placeholder="Enter Email" className="form-control" />
-          </div>
-          <div className="mb-2">
-            <label htmlFor="password">Confirm Password:</label>
-            <input type="password" placeholder="Enter Password" className="form-control" />
+            <label htmlFor="confirm_pwd">
+              Confirm Password:
+              <FontAwesomeIcon icon={faCheck} className={validPwdMatch && pwdMatch ? "valid" : "hide"} />
+              <FontAwesomeIcon icon={faTimes} className={validPwdMatch || !pwdMatch ? "hide" : "invalid"} />
+            </label>
+            <input type="password" id="confirm_pwd" onChange={(e) => setPwdMatch(e.target.value)} value={pwdMatch} required aria-invalid={validPwdMatch ? "false" : "true"} aria-describedby="confirmnote" onFocus={() => setValidPwdFocus(true)} onBlur={() => setValidPwdFocus(false)} className="form-control" />
+            <p id="confirmnote" className={validPwdFocus && !validPwdMatch ? "instructions" : "offscreen"}>
+              <FontAwesomeIcon icon={faInfoCircle} />
+              Must match the first password input field.
+            </p>
           </div>
           <div className="d-grid mt-2">
             <button className="btn btn-primary">Sign Up</button>
