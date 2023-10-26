@@ -30,8 +30,7 @@ export default function Login() {
   return (
     <>
       {success ? (
-        <Link>my profile</Link>
-        
+        <Link to="/profile">click here</Link>
       ) : (
         <div className="login template d-flex justify-content-center align-items-center vh-100">
           <div className="form_container p-5 rounded bg-white">
@@ -55,7 +54,9 @@ export default function Login() {
                 </label>
               </div>
               <div className="d-grid">
-                <button className="btn btn-primary">Sign In</button>
+                <Link to="/users">
+                  <button className="btn btn-primary">Sign In</button>
+                </Link>
               </div>
               <p className="text-end mt-2">
                 Forgot <Link href="/passwordreset">Password?</Link>
