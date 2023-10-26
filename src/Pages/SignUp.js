@@ -28,7 +28,7 @@ export default function SignUp() {
   const [validPwdFocus, setValidPwdFocus] = useState(false);
 
   //success or err message
-  const [success, SetSuccess] = useState(true);
+  const [success, setSuccess] = useState(true);
   const [err, setErr] = useState("");
 
   //user sign in
@@ -59,10 +59,24 @@ export default function SignUp() {
     setErr("");
   }, [user, pwd, pwdMatch]);
 
+  //submit function
+
+  const handleSubmit = async(e) => {
+    e.preventDefault();
+    const v1= USER_REGEX.test(user);
+    const v2 = PWD_REGEX.test(pwd);
+    if(!v1 || !v2) {
+      setErr('Invalid Entry')
+      return;
+    }
+    console.log(user,pwd);
+    setSuccess(true);
+  }
+
   return (
     <div className="signup template d-flex justify-content-center align-items-center vh-100">
       <div className="form_container p-5 rounded bg-white">
-        <form>
+        <form onSubmit={handleSubmit}>
           <p ref={errRef} aria-live="assertive">
             {err}
           </p>
