@@ -66,6 +66,12 @@ function Timer() {
 
   return (
     <div>
+         <div>
+        <h2>"Creativity is intelligence having fun."</h2>
+        </div>
+        <div>
+        <p>It's not the skill. It's the will...</p>
+        </div>
       <CircularProgressbar
         value={percentage}
         text={minutes + ':' + seconds}
