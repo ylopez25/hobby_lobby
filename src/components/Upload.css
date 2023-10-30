@@ -1,10 +1,21 @@
+.upload_title {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width:80%;
+  margin: 50px;
+}
 .upload_section {
   display: flex;
   justify-content: space-around;
+  margin:30px;
 }
+
+
 .upload_img {
   width: 50%;
   height: 700px;
+
 }
 .upload_details {
   /* background-color: pink; */
@@ -16,18 +27,33 @@
   justify-content: space-between;
 }
 
-h1 {
-  display: flex;
-  justify-content: center;
-}
-
-.upload_buttons {
-  display: flex;
-  justify-content: center;
-}
-
 .upload_box {
-  border: 2px solid;
+  border: 2px dotted;
   margin: 10px;
   height: 70%;
+  overflow: auto;
+}
+
+textarea {
+  font-weight: 700;
+  cursor:text;
+  font-size: 36px;
+  -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    word-wrap: break-word;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    box-sizing: border-box;
+    caret-color: #333;
+    padding: 0;
+    resize: none;
+    width: 100%;
+}
+
+textarea:focus {
+  outline:none;
+  height:43px;
 }
