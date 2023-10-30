@@ -48,11 +48,11 @@ export default function Update() {
           </div>
         </div>
         <div className="upload_details">
-          <textarea name="name" id="" cols="30" rows="10" placeholder="Title" style={{ height: "43px" }}></textarea>
+          <textarea name="name" id="" placeholder="Title" ></textarea>
           <hr />
-          <textarea name="name" id="" cols="30" rows="10" placeholder="Describe the project you worked on:" style={{ height: "43px" }}></textarea>
+          <textarea name="name" id="" rows="3" placeholder="Describe the project you worked on:" ></textarea>
           <hr />
-          <textarea name="name" id="" cols="30" rows="10" placeholder="Leave your motivational tip of the day:" style={{ height: "43px" }}></textarea>
+          <textarea name="name" id="" rows="3" placeholder="Leave your motivational tip of the day:"></textarea>
           <hr />
           <div>
             <button className="btn btn-primary">submit</button>

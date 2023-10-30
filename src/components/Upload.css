@@ -34,10 +34,10 @@
   overflow: auto;
 }
 
-textarea {
-  font-weight: 700;
+.upload_details textarea {
+  font-weight: 500;
   cursor:text;
-  font-size: 36px;
+  font-size: 25px;
   -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     word-wrap: break-word;
@@ -51,9 +51,10 @@ textarea {
     padding: 0;
     resize: none;
     width: 100%;
+    overflow: auto;
 }
 
-textarea:focus {
+.upload_details textarea:focus {
   outline:none;
-  height:43px;
+  /* height:43px; */
 }
