@@ -1,12 +1,33 @@
-.profile_info {
-  padding:30px;
-  font-size: large;
-}
-.profile_username {
+.upload_section {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
-.profile_imgupload {
+.upload_img {
+  width: 50%;
+  height: 700px;
+}
+.upload_details {
+  /* background-color: pink; */
+  width: 50%;
+}
+
+.upload_title {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+}
+
+.upload_buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.upload_box {
+  border: 2px solid;
+  margin: 10px;
+  height: 70%;
 }

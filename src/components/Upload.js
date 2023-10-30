@@ -12,30 +12,46 @@ export default function Update() {
   };
 
   return (
-    <div className="profile_info">
-      <div className="profile_username">
-        <h1>Username</h1>
-        <p>Status:Live</p>
-      </div>
-      <div className="profile_imgupload">
+    <div className="upload">
+      <div className="upload_title">
+        <h1>Share your accomplishment to inspire others</h1>
         <div>
-          <h2>Upload</h2>
-          <input type="file" onChange={imgFilehandler} />
-          <hr />
-          <button>upload</button>
-          <button>clear</button>
+          <select name="" id="">
+            <option value="hobby">select hobby</option>
+            <option value="hobby">crotchet</option>
+            <option value="hobby">swimming</option>
+          </select>
         </div>
-        <div>
-          <h3>Preview</h3>
-          {imgfile.map((elem) => {
-            return (
-              <>
-                <span key={elem}>
-                  <img src={elem} height="200" width="200" alt="med1" />
-                </span>
-              </>
-            );
-          })}
+      </div>
+      <div className="upload_section">
+        <div className="upload_img">
+          <div className="upload_box">
+            {imgfile.map((elem) => {
+              return (
+                <>
+                  <span key={elem}>
+                    <img src={elem} height="200" width="200" alt="med1" />
+                  </span>
+                </>
+              );
+            })}
+            <input type="file" onChange={imgFilehandler} />
+          </div>
+          <hr />
+          <div className="upload_buttons">
+            <button>upload</button>
+            <button>clear</button>
+          </div>
+        </div>
+        <div className="upload_details">
+          <label htmlFor="title">Title:</label>
+          <input type="title" />
+          <hr />
+          <label htmlFor="title">Description:</label>
+          <input type="text" />
+          <button>
+            submit
+          </button>
         </div>
       </div>
     </div>
