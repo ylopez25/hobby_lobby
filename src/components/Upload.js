@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import "./Upload.css";
 
 export default function Update() {
@@ -48,14 +49,16 @@ export default function Update() {
           </div>
         </div>
         <div className="upload_details">
-          <textarea name="name" id="" placeholder="Title" ></textarea>
+          <textarea name="name" id="" placeholder="Title"></textarea>
           <hr />
-          <textarea name="name" id="" rows="3" placeholder="Describe the project you worked on:" ></textarea>
+          <textarea name="name" id="" rows="3" placeholder="Describe the project you worked on:"></textarea>
           <hr />
           <textarea name="name" id="" rows="3" placeholder="Leave your motivational tip of the day:"></textarea>
           <hr />
           <div>
-            <button className="btn btn-primary">submit</button>
+            <Link to="/profile">
+              <button className="btn btn-primary">submit</button>
+            </Link>
           </div>
         </div>
       </div>
