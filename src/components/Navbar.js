@@ -1,15 +1,8 @@
 import { Link } from "react-router-dom";
-import {useState} from 'react';
 import "./Navbar.css";
 
 export default function Nav() {
-  const [value, setValue] = useState('fruit');
 
- const handleChange = (event) => {
-
-   setValue(event.target.value);
-
- };
   return (
     <div className="nav">
       <div className="nav_left">
@@ -28,7 +21,6 @@ export default function Nav() {
         <p>
           <Link to="/focus" style={{textDecoration:"none", color:"black"}}>Focus</Link>
         </p>
-        {/* <p>Settings</p> */}
       </div>
       <div className="nav_right">
         <p>
