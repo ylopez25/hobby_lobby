@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import "./Upload.css";
 
 export default function Update() {
@@ -11,10 +12,13 @@ export default function Update() {
     }
   };
 
+  const clearFile = () => {
+    uploadimg([]);
+  };
   return (
     <div className="upload">
       <div className="upload_title">
-        <h1>Share your accomplishment to inspire others</h1>
+        <h3>Share your accomplishment to inspire others</h3>
         <div>
           <select name="" id="">
             <option value="hobby">select hobby</option>
@@ -35,23 +39,27 @@ export default function Update() {
                 </>
               );
             })}
-            <input type="file" onChange={imgFilehandler} />
           </div>
+          <input type="file" onChange={imgFilehandler} />
           <hr />
-          <div className="upload_buttons">
-            <button>upload</button>
-            <button>clear</button>
+          <div>
+            <button onClick={clearFile} className="btn btn-primary">
+              clear
+            </button>
           </div>
         </div>
         <div className="upload_details">
-          <label htmlFor="title">Title:</label>
-          <input type="title" />
+          <textarea name="name" id="" placeholder="Title"></textarea>
           <hr />
-          <label htmlFor="title">Description:</label>
-          <input type="text" />
-          <button>
-            submit
-          </button>
+          <textarea name="name" id="" rows="3" placeholder="Describe the project you worked on:"></textarea>
+          <hr />
+          <textarea name="name" id="" rows="3" placeholder="Leave your motivational tip of the day:"></textarea>
+          <hr />
+          <div>
+            <Link to="/profile">
+              <button className="btn btn-primary">submit</button>
+            </Link>
+          </div>
         </div>
       </div>
     </div>
