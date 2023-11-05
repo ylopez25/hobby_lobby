@@ -4,4 +4,5 @@ body {
   font-family: "Mona Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-repeat: no-repeat;
   background-size: cover;
+  background-size:100% 100%;
 }
