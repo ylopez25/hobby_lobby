@@ -33,7 +33,7 @@ export default function Login() {
         <Link to="/profile">click here</Link>
       ) : (
         <div className="login template d-flex justify-content-center align-items-center vh-100">
-          <div className="form_container p-5 rounded bg-white">
+          <div className="form_container p-5 rounded bg-black">
             <form onSubmit={handleSubmit}>
               <p ref={errRef} aria-live="assertive">
                 {err}
