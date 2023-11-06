@@ -7,27 +7,27 @@ export default function Nav() {
     <div className="nav">
       <div className="nav_left">
         <h3>
-          <Link to="/" style={{textDecoration:"none", color:"black"}}>HL</Link>
+          <Link to="/" style={{textDecoration:"none", color:"white"}}>HL</Link>
         </h3>
         <p>
-          <Link to="/users" style={{textDecoration:"none", color:"black"}}>Inspiration</Link>
+          <Link to="/users" style={{textDecoration:"none", color:"white"}}>Inspiration</Link>
         </p>
         <p>
-          <Link to="/create" style={{textDecoration:"none", color:"black"}}>Create</Link>
+          <Link to="/create" style={{textDecoration:"none", color:"white"}}>Create</Link>
         </p>
         <p>
-          <Link to="/profile" style={{textDecoration:"none", color:"black"}}>Profile</Link>
+          <Link to="/profile" style={{textDecoration:"none", color:"white"}}>Profile</Link>
         </p>
         <p>
-          <Link to="/focus" style={{textDecoration:"none", color:"black"}}>Focus</Link>
+          <Link to="/focus" style={{textDecoration:"none", color:"white"}}>Focus</Link>
         </p>
       </div>
       <div className="nav_right">
         <p>
-          <Link to="/login" style={{textDecoration:"none", color:"black"}}> Login </Link>
+          <Link to="/login" style={{textDecoration:"none", color:"white"}}> Login </Link>
           </p>
         <p>
-        <Link to="/signup" style={{textDecoration:"none", color:"black"}}>Sign Up </Link>
+        <Link to="/signup" style={{textDecoration:"none", color:"white"}}>Sign Up </Link>
         </p>
       </div>
     </div>
