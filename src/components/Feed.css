@@ -24,7 +24,11 @@
   width: 20%;
   mix-blend-mode: multiply;
 }
-
+.user_toggle button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
 .search {
   display: flex;
   justify-content: space-around;
