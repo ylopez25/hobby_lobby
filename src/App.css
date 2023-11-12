@@ -1,10 +1,9 @@
 body {
-  background-image: url('https://images.unsplash.com/photo-1500462918059-b1a0cb512f1d?auto=format&fit=crop&q=60&w=700&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Y3JlYXRpdmUlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fHww');
-  /* color: rgb(161, 159, 159); */
-  color:white ;
+  color: rgb(161, 159, 159);
   font-family: "Mona Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-repeat: no-repeat;
   background-size: cover;
   background-size:100% 100%;
   margin-bottom: 100px;
+  min-height: 100vh;
 }

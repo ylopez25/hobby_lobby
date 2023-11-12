@@ -2,7 +2,7 @@
   display:flex;
   justify-content: center;
   height: 80px;
-  background: linear-gradient(66deg, #e6fbfe 0%, #edddfb 100%);
+  /* background: linear-gradient(66deg, #e6fbfe 0%, #edddfb 100%); */
 }
 .searchbar input {
   display: flex;
