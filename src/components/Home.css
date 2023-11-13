@@ -6,6 +6,21 @@
   text-align: center;
 }
 
+.home_btn {
+  display: flex;
+  justify-content: space-around;
+  padding: 0px 600px;
+  height: 30px;
+}
+
+.home_btn button {
+  color: white;
+  background: black;
+  border: 1px solid;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
 .home_writing {
   padding-top: 7%;
   padding-bottom: 4%;
@@ -29,8 +44,13 @@
   align-items: center;
   padding: 30px 250px;
 }
+
 .home_pt1 img {
   border: 2px solid;
   width: 200px;
   height: 300px;
+}
+
+.home_complete {
+  margin-top: 20px;
 }

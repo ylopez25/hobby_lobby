@@ -12,10 +12,14 @@ export default function Home() {
         <p>No more distractions, writers block, or mindless scrolling</p>
         <p>Become your best self with limitless possibilities</p>
         <br />
-        <button>
-          <Link to="/signup">Join Now</Link>
-        </button>
-        <button>Learn More</button>
+        <div className="home_btn">
+          <button>
+            <Link to="/signup" style={{ textDecoration: "none", color: "white" }}>
+              Join Now
+            </Link>
+          </button>
+          <button>Learn More</button>
+        </div>
       </div>
       <div className="home_info">
         <img src={LandingImg} alt="" />
@@ -52,6 +56,9 @@ export default function Home() {
           <img src="" alt="img" />
           <h5>Set timer to desired focus and break time</h5>
         </div>
+      </div>
+      <div className="home_complete">
+        <h3>When done upload on create page to inspire others!</h3>
       </div>
     </div>
   );
