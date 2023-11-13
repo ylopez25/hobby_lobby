@@ -1,25 +1,36 @@
 .home {
-    min-height:400vh;
-    color:black;
-    font-weight: 300;
-    line-height: 1.25;
-    text-align: center;
-
+  min-height: 400vh;
+  color: black;
+  font-weight: 300;
+  line-height: 1.25;
+  text-align: center;
 }
 
 .home_writing {
-padding-top:7%;
-padding-bottom: 4%;
+  padding-top: 7%;
+  padding-bottom: 4%;
 }
 
 .home_info img {
-    width: 65%;
-    height: 500px;
-    border-radius: 40px;
+  width: 65%;
+  height: 500px;
+  border-radius: 40px;
 }
 
 .home_benefits {
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 4%;
+}
+
+.home_pt1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 250px;
+}
+.home_pt1 img {
+  border: 2px solid;
+  width: 200px;
+  height: 300px;
 }

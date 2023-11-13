@@ -15,7 +15,7 @@ export default function Home() {
         <button>
           <Link to="/signup">Join Now</Link>
         </button>
-        <button>Learn more</button>
+        <button>Learn More</button>
       </div>
       <div className="home_info">
         <img src={LandingImg} alt="" />
@@ -29,10 +29,29 @@ export default function Home() {
           <h3>Benefit 2</h3>
           <p>Increase productivity and decrease distractions</p>
         </div>
-      <div>
-        <h3>Benefit 3</h3>
-        <p>Become your best self</p>
+        <div>
+          <h3>Benefit 3</h3>
+          <p>Become your best self</p>
+        </div>
       </div>
+      <div className="home_howto">
+        <h1>How it works:</h1>
+        <div className="home_pt1">
+          <h5>Browse users based on hobby</h5>
+          <img src="" alt="img" />
+        </div>
+        <div className="home_pt1">
+          <img src="" alt="img" />
+          <h5>Connect to find them quickly next time</h5>
+        </div>
+        <div className="home_pt1">
+          <h5>Enter Focus Room (recommended 15 min)</h5>
+          <img src="" alt="img" />
+        </div>
+        <div className="home_pt1">
+          <img src="" alt="img" />
+          <h5>Set timer to desired focus and break time</h5>
+        </div>
       </div>
     </div>
   );
