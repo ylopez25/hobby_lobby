@@ -1,3 +1,7 @@
+.home {
+    background: black;
+    min-height:400vh;
+}
 .home h2{
     display: flex;
     justify-content: center;
