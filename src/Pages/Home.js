@@ -13,6 +13,9 @@ export default function Home() {
       <button>Join Now</button>
       <button>Learn more</button>
     </div>
+    <div className='home_info'>
+    <img src="https://img.freepik.com/free-vector/design-strategy-abstract-concept-illustration-design-plan-development-project-idea-implementation-project-requirements-web-design-drawing-software-app_335657-3379.jpg?size=626&ext=jpg&ga=GA1.1.1517186467.1699838927&semt=ais" alt="" />
+    </div>
     </div>
   );
 }
