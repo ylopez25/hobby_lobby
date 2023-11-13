@@ -4,8 +4,15 @@ import "../components/Home.css";
 export default function Home() {
   return (
     <div className="home">
-      <h2>Welcome to Hobby Lobby!</h2>
-      <button>Explore Now</button>
+    <div className='home_writing'>
+      <h1>Where creativity and inspiration intersect</h1>
+      <br/>
+      <p>No more distractions, writers block, or mindless scrolling</p>
+      <p>Become your best self with limitless possibilities</p>
+      <br/>
+      <button>Join Now</button>
+      <button>Learn more</button>
+    </div>
     </div>
   );
 }
