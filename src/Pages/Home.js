@@ -41,7 +41,7 @@ export default function Home() {
       <div className="home_howto">
         <h1>How it works:</h1>
         <div className="home_pt1">
-          <h5>Browse users based on hobby</h5>
+          <h5>Browse users based on hobby,city,username</h5>
           <img src="" alt="img" />
         </div>
         <div className="home_pt1">
@@ -49,12 +49,12 @@ export default function Home() {
           <h5>Connect to find them quickly next time</h5>
         </div>
         <div className="home_pt1">
-          <h5>Enter Focus Room (recommended 15 min)</h5>
+          <h5>Enter Focus Room (less than 15 min later)</h5>
           <img src="" alt="img" />
         </div>
         <div className="home_pt1">
           <img src="" alt="img" />
-          <h5>Set timer to desired focus and break time</h5>
+          <h5>Set timer to desired focus and break time & get started!!</h5>
         </div>
       </div>
       <div className="home_complete">
