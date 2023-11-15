@@ -8,7 +8,7 @@ export default function Search({ filterbyCity, citiesMenu, search, handleChange 
   return (
     <div>
       <div className="searchbar">
-        <input type="search" placeholder="Search..." value={search} onChange={handleChange} />
+        <input type="search" placeholder="username,name" value={search} onChange={handleChange} />
 
         <select onChange={handleSelected}>
           {citiesMenu?.map((city) => {
