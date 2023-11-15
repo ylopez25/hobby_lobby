@@ -1,7 +1,7 @@
 import React from "react";
 import "../components/Home.css";
 import { Link } from "react-router-dom";
-import LandingImg from "../components/landingimg.png";
+import LandingImg from "../components/landingimg.jpg";
 
 export default function Home() {
   return (
