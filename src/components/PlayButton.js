@@ -9,8 +9,8 @@ function PlayButton(props) {
       </button>
 
       <div>
-        <button {...props}>
-          <Link to="/create">Upload:</Link>
+        <button className={'with-text'}>
+          <Link to="/create" style={{textDecoration:"none", color:"black"}}>Upload:</Link>
         </button>
       </div>
     </>
