@@ -9,7 +9,7 @@ function PlayButton(props) {
       </button>
 
       <div>
-        <button>
+        <button {...props}>
           <Link to="/create">Upload:</Link>
         </button>
       </div>
