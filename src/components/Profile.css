@@ -16,7 +16,7 @@
 }
 .profile_icons{
     display:flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .profile_icons svg {
     height: 50px;
