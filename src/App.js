@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home";
 import Index from "./Pages/Index";
 import Create from "./Pages/Create";
+import Edit from './Pages/EditProfile';
 import Profile from "./Pages/Profile";
 import Focus from "./Pages/Focus";
 import Login from "./Pages/Login";
@@ -25,6 +26,7 @@ function App() {
             <Route path="/users" element={<Index />} />
             <Route path="/create" element={<Create />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/editprofile" element={<Edit/>}/>
             <Route path="/focus" element={<Focus/>}/>
             <Route path="/login" element={<Login/>}/>
             <Route path="/signup" element={<SignUp/>}/>
