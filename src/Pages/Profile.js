@@ -64,9 +64,8 @@ export default function Profile() {
             </svg>
 
             <div className="profile_tabs">
-              <button>images</button>
-
-              <button>following</button>
+              <button className='btn btn-dark btn-small'>images</button>
+              <button className='btn btn-dark btn-small'>following</button>
             </div>
             <svg>
               <Link to="/create">
