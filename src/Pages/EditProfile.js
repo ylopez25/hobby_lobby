@@ -3,7 +3,7 @@ import axios from "axios";
 import "../components/EditProfile.css";
 import { useState, useEffect } from "react";
 //import { useHistory } from "react-router-dom";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams ,Link} from "react-router-dom";
 
 const API_URL = process.env.REACT_APP_API_URL;
 
@@ -57,7 +57,12 @@ export default function EditProfile() {
        </div>
        <div className='mt-3 d-grid'>
         <button className="btn btn-secondary mb-2">Submit</button>
-        <button class="btn btn-secondary">Back</button>
+        <button className="btn btn-secondary">
+            <Link to='/profile' style={{textDecoration:"none", color:"white"}}>
+            Back
+            </Link>
+        
+        </button>
        </div>
       </form>
       </div>
