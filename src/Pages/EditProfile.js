@@ -36,7 +36,7 @@ export default function EditProfile() {
 
   return (
     <div className="d-flex justify-content-center align-items-center vh-100">
-        <div  className="form_container p-5 rounded bg-black text-white mb-1 text-center">
+        <div  className="form_container p-5 rounded bg-dark text-white mb-1 text-center">
       <form onSubmit={handleSubmit} >
         <h3>Edit Profile Info:</h3>
         <div>
@@ -56,8 +56,8 @@ export default function EditProfile() {
         <input type="text"  className='form-control'/>
        </div>
        <div className='mt-3 d-grid'>
-        <button>Submit</button>
-        <button>Back</button>
+        <button className="btn btn-secondary mb-2">Submit</button>
+        <button class="btn btn-secondary">Back</button>
        </div>
       </form>
       </div>
