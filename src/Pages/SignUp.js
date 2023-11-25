@@ -83,7 +83,7 @@ export default function SignUp() {
           <Login />
         </section>
       ) : (
-        <div className="signup template d-flex justify-content-center align-items-center vh-100">
+        <div className="signup template d-flex justify-content-center align-items-center vh-100 bg-black">
           <div className="form_container p-5 rounded bg-black text-white">
             <form onSubmit={handleSubmit}>
               <p ref={errRef} aria-live="assertive">
