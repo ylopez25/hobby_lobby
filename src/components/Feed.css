@@ -62,13 +62,6 @@
   width: 50%;
 }
 
-.userinfo_topimg button{
-position:relative;
-top:10%;
-left:50%;
-width:25px;
-height:25px;
-}
 
 .userinfo_left p {
   margin: 20px;
@@ -86,7 +79,6 @@ height:25px;
 .gallery_pics img {
   display: flex;
   justify-content: center;
-  position:absolute;
   width:450px;
   height:350px;
   border-radius: 15px;
