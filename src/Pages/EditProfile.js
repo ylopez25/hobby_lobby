@@ -13,6 +13,12 @@ export default function EditProfile() {
   // let history = useHistory();
   const navigate = useNavigate();
   let { id } = useParams();
+  let userInfo = {
+    pic: '',
+    userName : '',
+    name: '',
+    city: '',
+  }
 
   const updateProfile = (info, id) => {
     try {
@@ -28,6 +34,12 @@ export default function EditProfile() {
       console.log("err", err);
     }
   };
+
+
+  const handleChange = (e) => {
+    setUsers(e.target.value);
+    setCities(e.target.value)
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
