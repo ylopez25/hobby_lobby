@@ -53,7 +53,7 @@ export default function EditProfile() {
           <h3>Edit Profile Info:</h3>
           <div>
             <label htmlFor="new_img">Profile Picture:</label>
-            <input type="text" className="form-control" />
+            <input type="text" className="form-control" onChange={handleChange}/>
           </div>
           <div>
             <label htmlFor="new_username">Username:</label>
