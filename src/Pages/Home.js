@@ -13,12 +13,12 @@ export default function Home() {
         <p>Become your best self with limitless possibilities</p>
         <br />
         <div className="home_btn">
-          <button>
+          <button className="btn btn-secondary">
             <Link to="/signup" style={{ textDecoration: "none", color: "white" }}>
               Join Now
             </Link>
-          </button>
-          <button>Learn More</button>
+          </button >
+          <button className="btn btn-secondary">Learn More</button>
         </div>
       </div>
       <div className="home_info">

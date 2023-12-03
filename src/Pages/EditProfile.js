@@ -13,6 +13,12 @@ export default function EditProfile() {
   // let history = useHistory();
   const navigate = useNavigate();
   let { id } = useParams();
+  let userInfo = {
+    pic: '',
+    userName : '',
+    name: '',
+    city: '',
+  }
 
   const updateProfile = (info, id) => {
     try {
@@ -29,19 +35,25 @@ export default function EditProfile() {
     }
   };
 
+
+  const handleChange = (e) => {
+    setUsers(e.target.value);
+    setCities(e.target.value)
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault();
     updateProfile(id);
   };
 
   return (
-    <div className="d-flex justify-content-center align-items-center vh-100">
+    <div className="d-flex justify-content-center align-items-center vh-100 bg-black">
       <div className="form_container p-5 rounded text-white mb-1 text-center">
         <form onSubmit={handleSubmit}>
           <h3>Edit Profile Info:</h3>
           <div>
             <label htmlFor="new_img">Profile Picture:</label>
-            <input type="text" className="form-control" />
+            <input type="text" className="form-control" onChange={handleChange}/>
           </div>
           <div>
             <label htmlFor="new_username">Username:</label>
@@ -56,7 +68,9 @@ export default function EditProfile() {
             <input type="text" className="form-control" />
           </div>
           <div className="mt-3 d-grid">
-            <button className="btn btn-secondary mb-2">Submit</button>
+            <button className="btn btn-secondary mb-2">
+                Submit
+            </button>
             <button className="btn btn-secondary">
               <Link to="/profile" style={{ textDecoration: "none", color: "white" }}>
                 Back

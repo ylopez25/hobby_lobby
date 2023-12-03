@@ -45,7 +45,6 @@
   border-radius: 50%;
   width: 25px;
   height: 25px;
-  border: 1px solid;
   background-color: black;
 }
 .userinfo {
@@ -61,6 +60,8 @@
   align-items: center;
   width: 50%;
 }
+
+
 .userinfo_left p {
   margin: 20px;
 }
@@ -81,6 +82,7 @@
   height:350px;
   border-radius: 15px;
   margin-bottom: 5px;
+
 }
 
 .gallery_pic img {
@@ -89,6 +91,7 @@
   width:440px;
   height:350px;
   border-radius: 15px;
+  transition: all 0.4s
 }
 ::-webkit-scrollbar {
   width: 5px;

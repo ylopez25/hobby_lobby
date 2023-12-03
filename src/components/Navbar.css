@@ -4,9 +4,8 @@
   align-items: center;
   font-size: large;
   font-weight: 450;
-  /* margin-bottom: 20px; */
   padding-top: 15px;
-  background-color: black;
+  background-color: rgb(12, 15, 115);
   color:white;
 }
 .nav_left {
@@ -20,7 +19,3 @@
   justify-content: space-around;
   width: 20%;
 }
-Link {
-  text-decoration: none;
-}
-

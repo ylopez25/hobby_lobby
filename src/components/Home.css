@@ -9,16 +9,6 @@
 .home_btn {
   display: flex;
   justify-content: space-around;
-  padding: 0px 600px;
-  height: 30px;
-}
-
-.home_btn button {
-  color: white;
-  background: black;
-  border: 1px solid;
-  cursor: pointer;
-  border-radius: 10px;
 }
 
 .home_writing {
