@@ -12,7 +12,6 @@
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  border: solid 1px;
 }
 
 .profile_tabs {
@@ -43,7 +42,6 @@
 .profile_gallery img {
   width: 300px;
   height: 300px;
-  border: 2px solid;
   border-radius: 20px;
   margin-bottom: 50px;
 }
