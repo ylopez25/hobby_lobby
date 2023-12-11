@@ -21,6 +21,7 @@
 
 .profile_tabs button {
   height: 40px;
+  margin:10px;
 }
 .profile_icons {
   display: flex;
