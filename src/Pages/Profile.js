@@ -53,8 +53,8 @@ export default function Profile() {
             <img src={users[0].pic} alt="img" />
             <h1>{users[0].first_name}</h1>
             <p>@{users[0].user_name}</p>
-            <p>following: 47</p>
             <p>{cities[0].name}</p>
+            <p>{users[0].skill}</p>
           </div>
           <div className="profile_icons">
             <svg>
@@ -64,8 +64,8 @@ export default function Profile() {
             </svg>
 
             <div className="profile_tabs">
-              <button className='btn btn-dark btn-small'>images</button>
-              <button className='btn btn-dark btn-small'>following</button>
+              <button className='btn btn-dark btn-small'>Images</button>
+              <button className='btn btn-dark btn-small'>Following</button>
             </div>
             <svg>
               <Link to="/create">
