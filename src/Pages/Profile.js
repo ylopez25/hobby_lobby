@@ -10,6 +10,7 @@ export default function Profile() {
   const [loading, setLoading] = useState(true);
   const [err, setErr] = useState("");
   const [cities, setCities] = useState([]);
+  const [userss,setUserss] = useState([1,2,3])
 
   const API_URL = process.env.REACT_APP_API_URL;
 
@@ -53,19 +54,19 @@ export default function Profile() {
             <img src={users[0].pic} alt="img" />
             <h1>{users[0].first_name}</h1>
             <p>@{users[0].user_name}</p>
-            <p>following: 47</p>
             <p>{cities[0].name}</p>
+            <p>{users[0].skill}</p>
           </div>
           <div className="profile_icons">
             <svg>
-              <Link to="/1/editprofile">
+              <Link to={{pathname:"/1/editprofile", state:{userss}}}>
               <path d="M9 19.5a1.75 1.75 0 1 1 .001-3.501A1.75 1.75 0 0 1 9 19.5M22.25 16h-8.321c-.724-2.034-2.646-3.5-4.929-3.5S4.795 13.966 4.071 16H1.75a1.75 1.75 0 0 0 0 3.5h2.321C4.795 21.534 6.717 23 9 23s4.205-1.466 4.929-3.5h8.321a1.75 1.75 0 0 0 0-3.5M15 4.5a1.75 1.75 0 1 1-.001 3.501A1.75 1.75 0 0 1 15 4.5M1.75 8h8.321c.724 2.034 2.646 3.5 4.929 3.5s4.205-1.466 4.929-3.5h2.321a1.75 1.75 0 0 0 0-3.5h-2.321C19.205 2.466 17.283 1 15 1s-4.205 1.466-4.929 3.5H1.75a1.75 1.75 0 0 0 0 3.5"></path>
               </Link>
             </svg>
 
             <div className="profile_tabs">
-              <button className='btn btn-dark btn-small'>images</button>
-              <button className='btn btn-dark btn-small'>following</button>
+              <button className='btn btn-dark btn-small'>Images</button>
+              <button className='btn btn-dark btn-small'>Following</button>
             </div>
             <svg>
               <Link to="/create">
