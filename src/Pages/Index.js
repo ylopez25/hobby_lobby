@@ -49,12 +49,12 @@ export default function Index() {
           setAllUsers(data);
           setLoading(false);
         } else {
-          setErr(err);
-          setLoading(false);
+          throw new Error(err.message)
         }
       } catch (err) {
-        setLoading(false);
         setErr(`err: ${err.message}`);
+      }finally {
+        setLoading(false)
       }
     }
     fetchData();
