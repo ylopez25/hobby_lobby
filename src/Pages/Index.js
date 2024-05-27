@@ -42,10 +42,7 @@ export default function Index() {
         setLoading(true);
         const res = await fetch(`${API_URL}/v2/users?include=photos`);
         const json = await res.json();
-        console.log(json, "json");
         const { data, cities, err } = json;
-        console.log(data, "data");
-        console.log(cities, "cities");
         if (res.ok) {
           setCities(cities);
           setUsers(data);
@@ -74,12 +71,10 @@ export default function Index() {
 
   //city list menu
   const citiesMenu = [...new Set(cities.map((el) => el.name))];
-  console.log(citiesMenu, 'list of cities')
 
   //filter cities
   const filterbyCity = (city) => {
     const filterUsersCity = allUsers.filter((x) => x.city_name === city);
-    console.log(filterUsersCity, 'list of users?')
     setUsers(filterUsersCity)
   }
 
