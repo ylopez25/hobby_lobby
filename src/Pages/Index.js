@@ -14,6 +14,7 @@ export default function Index() {
   const [loading, setLoading] = useState(true);
   const [err, setErr] = useState("");
   const [cities, setCities] = useState([]);
+  const [toggle, setToggle] = useState(false)
 
   let displayUsers = users;
 
@@ -23,6 +24,10 @@ export default function Index() {
     setSearch(input);
   };
 
+  //handle toggle 
+  const handleToggle = () => {
+   setToggle(!toggle)
+  }
   //search filtering
   if (search) {
     displayUsers = users.filter((user) => {
@@ -31,6 +36,18 @@ export default function Index() {
       return fullUsername.includes(search.toLowerCase());
     });
   }
+
+  //sort
+  displayUsers = users.sort((a, b) => {
+    console.log(a, "a?");
+    if (a["id"] < b["id"]) {
+      return toggle ? -1 : 1;
+    } else if (a["id"] > b["id"]) {
+      return toggle ? 1 : -1;
+    } else {
+      return 0;
+    }
+  });
 
   const API_URL = process.env.REACT_APP_API_URL;
 
@@ -90,6 +107,9 @@ export default function Index() {
           citiesMenu={citiesMenu}
            search={search} 
            handleChange={handleChange} />
+           <button onClick={handleToggle}>
+            {toggle ? "^" : "v"}
+           </button>
           <Hobbies menuItems={menuItems} filterbySkill={filterbySkill} resetUsers={() => setUsers(allUsers)} />
           <Feed displayUsers={displayUsers} search={search} users={users} allUsers={allUsers} />
         </div>
